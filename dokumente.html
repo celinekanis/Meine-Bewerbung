@@ -1,85 +1,116 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dokumente – Celine Kanis</title>
-
-<style>
-body { margin:0; font-family:Montserrat,sans-serif; background:#c4d5e4; }
-
-header { background:#0B769F; padding:20px; }
-
-.burger { display:none; font-size:1.8rem; background:none; border:none; color:white; }
-
-nav { display:flex; justify-content:center; flex-wrap:wrap; gap:18px; }
-nav a { color:white; font-weight:bold; text-decoration:none; }
-
-main { display:flex; justify-content:center; min-height:70vh; }
-
-.box {
-  background:white;
-  border-radius:12px;
-  padding:40px 60px;
-  max-width:650px;
-  text-align:center;
-  box-shadow:0 4px 20px rgba(0,0,0,.1);
-  border-top:6px solid #0B769F;
-  border-bottom:6px solid #0B769F;
-}
-
-a.doc {
-  display:block;
-  margin:10px 0;
-  color:#0B769F;
-  font-weight:bold;
-  text-decoration:none;
-}
-
-footer { background:#0B769F; color:white; text-align:center; padding:20px; }
-
-@media(max-width:768px){
-  nav { display:none; flex-direction:column; }
-  nav.active { display:flex; }
-  .burger { display:block; margin:auto; }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – Celine Kanis</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Zusatz-Styles für Kontaktseite */
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 70vh;
+      padding: 40px;
+    }
+    .contact-box {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 40px 60px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+      border-top: 6px solid #0B769F;
+      border-bottom: 6px solid #0B769F;
+    }
+    h1 {
+      color: #0B769F;
+      font-variant: small-caps;
+      font-weight: bolder;
+      margin-bottom: 25px;
+    }
+    p {
+      color: #222;
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-bottom: 15px;
+    }
+    .Dokumente {
+      margin-top: 25px;
+    }
+    .Dokumente a {
+      display: block;
+      color: #0B769F;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 8px 0;
+      transition: color 0.3s;
+    }
+    .Dokumente a:hover {
+      color: #004aad;
+    }
+    header {
+      background-color: #0B769F;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+    nav a:hover {
+      color: #c4d5e4;
+    }
+    footer {
+      background: #0B769F;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9em;
+      border-top: 4px solid #0B769F;
+    }
+    footer a {
+      color: #c4d5e4;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-
 <body>
-
-<header>
-<button class="burger" onclick="toggleMenu()">☰</button>
-<nav id="nav">
-  <a href="index.html">Startseite</a>
-  <a href="about.html">Über mich</a>
-  <a href="motivation.html">Motivation</a>
-  <a href="CV.html">Lebenslauf</a>
-  <a href="dokumente.html">Dokumente</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="kontakt.html">Kontakt</a>
-</nav>
-</header>
-
-<main>
-<div class="box">
-<h1>Dokumente</h1>
-
-<a class="doc" href="CV_KanisC.pdf" target="_blank">Lebenslauf ansehen</a>
-<a class="doc" href="CV_KanisC.pdf" download>Lebenslauf herunterladen</a>
-<a class="doc" href="Arbeitszeugnisse_KanisC.pdf" target="_blank">Zeugnisse ansehen</a>
-<a class="doc" href="Arbeitszeugnisse_KanisC.pdf" download>Zeugnisse herunterladen</a>
-
-</div>
-</main>
-
-<footer>© 2026 Celine Kanis</footer>
-
-<script>
-function toggleMenu(){ document.getElementById("nav").classList.toggle("active"); }
-</script>
-
+  <header>
+    <nav>
+      <a href="index.html">Startseite</a>
+      <a href="über.html">Über mich</a>
+      <a href="motivation.html">Motivation</a>
+      <a href="CV.html">Lebenslauf</a>
+      <a href="dokumente.html">Dokumente</a>
+      <a href="portfolio.html">Portfolio</a> 
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+  <main>
+    <div class="contact-box">
+      <h1>Dokumente</h1>
+      <p>Hier finden Sie Dokumente wie Lebenslauf und Zeugnisse, bereitgestellt als PDF-Datei zum ansehen und herunterladen</p>
+        <div class="Dokumente">  
+        <a href="CV_KanisC.pdf" target="_blank">Lebenslauf ansehen</a>
+        <a href="CV_KanisC.pdf" download >Lebenslauf herunterladen</a>
+        <a href="Arbeitszeugnisse_KanisC.pdf" target="_blank">Zeugnisse ansehen</a>
+        <a href="Arbeitszeugnisse_KanisC.pdf" download >Zeugnisse herunterladen</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2026 Celine Kanis | <a href="mailto:celine.kanis@gmail.com">Kontakt aufnehmen</a></p>
+  </footer>
 </body>
-</html>
 
+</html>
 

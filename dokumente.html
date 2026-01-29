@@ -56,20 +56,20 @@
       padding: 20px;
       text-align: center;
     }
-nav ul { list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin:0; padding:0; }
-nav ul li { margin:0; }
+  nav ul { list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin:0; padding:0; }
+  nav ul li { margin:0; }
 
-nav a { color:white; text-decoration:none; font-weight:bold; transition:color 0.3s; }
-nav a:hover { color:#c4d5e4; }
+  nav a { color:white; text-decoration:none; font-weight:bold; transition:color 0.3s; }
+  nav a:hover { color:#c4d5e4; }
 
-.burger { display:none; font-size:1.8rem; background:none; border:none; color:white; cursor:pointer; }
+  .burger { display:none; font-size:1.8rem; background:none; border:none; color:white; cursor:pointer; }
 
-@media(max-width:768px){
+  @media(max-width:768px){
   nav { display:none; }
   nav.active { display:block; }
   nav ul { flex-direction:column; gap:12px; text-align:center; }
   .burger { display:block; margin:auto; }
-}
+  }
     footer {
       background: #0B769F;
       color: #fff;
@@ -125,5 +125,6 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 </body>
 
 </html>
+
 
 

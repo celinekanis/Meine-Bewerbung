@@ -1,252 +1,105 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Celine Kanis – Bewerbung als Fachinformatikerin für Anwendungsentwicklung</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celine Kanis – Bewerbung als Fachinformatikerin für Anwendungsentwicklung</title>
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; font-family: "Montserrat", sans-serif; background-color: #c4d5e4; color: #222; }
+header { background-color: #0B769F; padding: 20px; text-align: center; position: relative; }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+nav ul li { margin: 0; }
+nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+nav a:hover { color: #c4d5e4; }
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* ===== Global ===== */
-    body {
-      margin: 0;
-      font-family: "Montserrat", sans-serif;
-      background-color: #c4d5e4;
-      color: #222;
-    }
-
-    header {
-      background-color: #0B769F;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #c4d5e4;
-    }
-
-    main {
-      padding: 60px;
-    }
-
-  .headline {
-  color: #0B769F;
-  font-variant: small-caps;
-  font-weight: bolder;
-  text-align: left;
-  margin-bottom: 40px;
-  max-width: 1000px;
-  font-size: 2.2rem;
-  white-space: nowrap;       /* bleibt eine Zeile */
-  overflow: visible;         /* volle Breite anzeigen */
-  text-overflow: unset;      /* keine Ellipsen mehr */
+/* Burger Menü */
+.burger { display: none; font-size: 1.8rem; background: none; border: none; color: white; cursor: pointer; position: absolute; top: 18px; right: 20px; }
+@media(max-width:768px) {
+  nav { display: none; width: 100%; }
+  nav.active { display: block; }
+  nav ul { flex-direction: column; gap: 12px; text-align: center; }
+  .burger { display: block; }
 }
-/* Mobile Anpassung */
+
+/* Rest Styles bleiben unverändert */
+main { padding: 60px; }
+.headline { color: #0B769F; font-variant: small-caps; font-weight: bolder; text-align: left; margin-bottom: 40px; max-width: 1000px; font-size: 2.2rem; white-space: nowrap; overflow: visible; text-overflow: unset; }
+@media (max-width: 768px) { .headline { font-size: 1.4rem; white-space: normal; text-align: center; } }
+.intro { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; background-color: #0B769F; color: white; border-radius: 8px; padding: 40px 60px; box-shadow: 0 3px 20px rgba(0,0,0,0.1); }
+.intro-text { flex: 1 1 400px; }
+.intro-text h2 { font-size: x-large; margin-top: 0; }
+.intro-text p { line-height: 1.7; margin-bottom: 20px; }
+.Bewerbungsbild { max-width: 380px; height: auto; border-radius: 6px; object-fit: cover; flex-shrink: 0; }
+.more { display: inline-block; background: #fff; color: #0B769F; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s; margin-right: 10px; margin-bottom: 10px; }
+.more:hover { background-color: #004aad; color: #fff; }
+section#documents { margin-top: 80px; background: #fff; border-radius: 10px; padding: 40px 60px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); max-width: 100%; }
+section#documents h3 { color: #004aad; border-bottom: 2px solid #0B769F; margin-bottom: 20px; padding-bottom: 5px; font-weight: 700; }
+section#documents p { margin: 20px 0; }
+footer { background: #0B769F; color: #fff; text-align: center; padding: 20px 0; font-size: 0.9rem; margin-top: 80px; }
 @media (max-width: 768px) {
-  .headline {
-    font-size: 1.4rem;
-    white-space: normal;     /* darf umbrechen */
-    text-align: center;
-  }
+  main { padding: 30px 20px; }
+  .intro { flex-direction: column; padding: 30px; }
+  .Bewerbungsbild { width: 90%; margin: 0 auto; }
+  section#documents { padding: 30px; }
 }
-    .intro {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 40px;
-      background-color: #0B769F;
-      color: white;
-      border-radius: 8px;
-      padding: 40px 60px;
-      box-shadow: 0 3px 20px rgba(0,0,0,0.1);
-    }
-
-    .intro-text {
-      flex: 1 1 400px;
-    }
-
-    .intro-text h2 {
-      font-size: x-large;
-      margin-top: 0;
-    }
-
-    .intro-text p {
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .Bewerbungsbild {
-      max-width: 380px;
-      height: auto;
-      border-radius: 6px;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-
-    /* Buttons */
-    .more {
-      display: inline-block;
-      background: #fff;
-      color: #0B769F;
-      padding: 10px 20px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s;
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
-
-    .more:hover {
-      background-color: #004aad;
-      color: #fff;
-    }
-
-    /* ===== Documents Section ===== */
-    section#documents {
-      margin-top: 80px;
-      background: #fff;
-      border-radius: 10px;
-      padding: 40px 60px;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-      max-width: 100%;
-    }
-    .intro {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 40px;
-      background-color: #0B769F;
-      color: white;
-      border-radius: 8px;
-      padding: 40px 60px;
-      box-shadow: 0 3px 20px rgba(0,0,0,0.1);
-    }
-
-    section#documents h3 {
-      color: #004aad;
-      border-bottom: 2px solid #0B769F;
-      margin-bottom: 20px;
-      padding-bottom: 5px;
-      font-weight: 700;
-    }
-
-    section#documents p {
-      margin: 20px 0;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      background: #0B769F;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 0.9rem;
-      margin-top: 80px;
-    }
-
-    /* ===== Responsive Design ===== */
-    @media (max-width: 768px) {
-      main {
-        padding: 30px 20px;
-      }
-
-      .intro {
-        flex-direction: column;
-        padding: 30px;
-      }
-
-      .headline {
-        text-align: center;
-        padding: 0;
-      }
-
-      .Bewerbungsbild {
-        width: 90%;
-        margin: 0 auto;
-      }
-
-      section#documents {
-        padding: 30px;
-      }
-    }
-  </style>
+</style>
 </head>
-
 <body>
-  <header>
-    <nav aria-label="Hauptnavigation">
-      <ul>
-        <li><a href="index.html">Startseite</a></li>
-        <li><a href="about.html">Über mich</a></li>
-        <li><a href="motivation.html">Motivation</a></li>
-        <li><a href="CV.html">Lebenslauf</a></li>
-        <li><a href="dokumente.html">Dokumente</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <button class="burger" onclick="toggleMenu()">☰</button>
+  <nav id="nav" aria-label="Hauptnavigation">
+    <ul>
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="about.html">Über mich</a></li>
+      <li><a href="motivation.html">Motivation</a></li>
+      <li><a href="CV.html">Lebenslauf</a></li>
+      <li><a href="dokumente.html">Dokumente</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
-    <h1 class="headline">Bewerbung für ein Praktikum als Fachinformatikerin für Anwendungsentwicklung</h1>
-
-    <section class="intro">
-      <div class="intro-text">
-        <h2>Hallo!</h2>
-        <p>
-          Ich bin Celine – wissbegierige Quereinsteigerin mit Leidenschaft für Programmierung und digitale Lösungen.
-          Ich lerne derzeit Webentwicklung und möchte in einem IT‑Praktikum meine Liebe zum logischen Denken und Problemlösen mit echter Praxiserfahrung verbinden.
-        </p>
-        <div class="button-group">
-          <a href="about.html" class="more">Mehr über mich</a>
-          <a href="motivation.html" class="more">Motivation</a>
-          <a href="CV.html" target="_blank" rel="noopener noreferrer" class="more">Lebenslauf ansehen</a>
-          <a href="kontakt.html" class="more">Kontakt</a>
-        </div>
+<main>
+  <h1 class="headline">Bewerbung für ein Praktikum als Fachinformatikerin für Anwendungsentwicklung</h1>
+  <section class="intro">
+    <div class="intro-text">
+      <h2>Hallo!</h2>
+      <p>Ich bin Celine – wissbegierige Quereinsteigerin mit Leidenschaft für Programmierung und digitale Lösungen. Ich lerne derzeit Webentwicklung und möchte in einem IT‑Praktikum meine Liebe zum logischen Denken und Problemlösen mit echter Praxiserfahrung verbinden.</p>
+      <div class="button-group">
+        <a href="about.html" class="more">Mehr über mich</a>
+        <a href="motivation.html" class="more">Motivation</a>
+        <a href="CV.html" target="_blank" rel="noopener noreferrer" class="more">Lebenslauf ansehen</a>
+        <a href="kontakt.html" class="more">Kontakt</a>
       </div>
+    </div>
+    <img class="Bewerbungsbild" src="Bewerbungsbild.png" alt="Bewerbungsfoto von Celine Kanis">
+  </section>
 
-      <img class="Bewerbungsbild" src="Bewerbungsbild.png" alt="Bewerbungsfoto von Celine Kanis">
-    </section>
+  <section id="documents">
+    <h3>Lebenslauf & Zeugnisse</h3>
+    <p>
+      <a href="CV_KanisC.pdf" target="_blank" rel="noopener noreferrer" class="more">Lebenslauf ansehen (PDF)</a>
+      <a href="CV_KanisC.pdf" download class="more">Lebenslauf herunterladen (PDF)</a>
+      <a href="Zeugnis1.pdf" target="_blank" rel="noopener noreferrer" class="more">Zeugnis 1 ansehen</a>
+      <a href="Zeugnis2.pdf" target="_blank" rel="noopener noreferrer" class="more">Zeugnis 2 ansehen</a>
+    </p>
+  </section>
+</main>
 
-    <section id="documents">
-      <h3>Lebenslauf & Zeugnisse</h3>
-      <p>
-        <a href="CV_KanisC.pdf" target="_blank" rel="noopener noreferrer" class="more">Lebenslauf ansehen (PDF)</a>
-        <a href="CV_KanisC.pdf" download class="more">Lebenslauf herunterladen (PDF)</a>
-        <a href="Zeugnis1.pdf" target="_blank" rel="noopener noreferrer" class="more">Zeugnis 1 ansehen</a>
-        <a href="Zeugnis2.pdf" target="_blank" rel="noopener noreferrer" class="more">Zeugnis 2 ansehen</a>
-      </p>
-    </section>
-  </main>
+<footer>
+  <p>© 2026 Celine Kanis – Bewerbungswebsite</p>
+</footer>
 
-  <footer>
-    <p>© 2026 Celine Kanis – Bewerbungswebsite</p>
-  </footer>
+<script>
+function toggleMenu(){ document.getElementById("nav").classList.toggle("active"); }
+</script>
 </body>
 </html>
-
 
 
 

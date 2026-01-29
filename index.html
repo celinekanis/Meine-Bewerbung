@@ -26,7 +26,12 @@ nav { display:flex; justify-content:center; flex-wrap:wrap; gap:18px; }
 nav a { color:white; text-decoration:none; font-weight:bold; }
 
 nav a:hover { color:#c4d5e4; }
-
+@media(max-width:768px) {
+  nav { display: none; width: 100%; }
+  nav.active { display: block; }
+  nav ul { flex-direction: column; gap: 12px; text-align: center; }
+  .burger { display: block; }
+}
 
 
 /* Rest Styles bleiben unverändert */
@@ -150,6 +155,7 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 </script>
 </body>
 </html>
+
 
 
 

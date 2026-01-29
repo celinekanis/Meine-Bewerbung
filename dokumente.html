@@ -56,16 +56,20 @@
       padding: 20px;
       text-align: center;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
-    nav a:hover {
-      color: #c4d5e4;
-    }
+nav ul { list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin:0; padding:0; }
+nav ul li { margin:0; }
+
+nav a { color:white; text-decoration:none; font-weight:bold; transition:color 0.3s; }
+nav a:hover { color:#c4d5e4; }
+
+.burger { display:none; font-size:1.8rem; background:none; border:none; color:white; cursor:pointer; }
+
+@media(max-width:768px){
+  nav { display:none; }
+  nav.active { display:block; }
+  nav ul { flex-direction:column; gap:12px; text-align:center; }
+  .burger { display:block; margin:auto; }
+}
     footer {
       background: #0B769F;
       color: #fff;
@@ -84,17 +88,25 @@
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Startseite</a>
-      <a href="über.html">Über mich</a>
-      <a href="motivation.html">Motivation</a>
-      <a href="CV.html">Lebenslauf</a>
-      <a href="dokumente.html">Dokumente</a>
-      <a href="portfolio.html">Portfolio</a> 
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-  </header>
+<header>
+  <button class="burger" onclick="toggleMenu()">☰</button>
+  <nav id="nav" aria-label="Hauptnavigation">
+    <ul>
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="about.html">Über mich</a></li>
+      <li><a href="motivation.html">Motivation</a></li>
+      <li><a href="CV.html">Lebenslauf</a></li>
+      <li><a href="dokumente.html">Dokumente</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+function toggleMenu(){ document.getElementById("nav").classList.toggle("active"); }
+</script>
+  
   <main>
     <div class="contact-box">
       <h1>Dokumente</h1>
@@ -113,4 +125,5 @@
 </body>
 
 </html>
+
 

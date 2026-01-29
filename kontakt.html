@@ -27,22 +27,26 @@ header {
   padding: 20px;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
 
-nav a {
-  color: var(--white);
-  text-decoration: none;
-  font-weight: bold;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-nav a:hover {
-  color: var(--background);
-}
+    nav a:hover {
+      color: #c4d5e4;
+    }
 
 /* Main */
 main {
@@ -148,6 +152,7 @@ footer {
 
 </body>
 </html>
+
 
 
 

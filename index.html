@@ -27,27 +27,82 @@ nav a:hover { color: #c4d5e4; }
 
 /* Rest Styles bleiben unverändert */
 main { padding: 60px; }
-.headline { color: #0B769F; font-variant: small-caps; font-weight: bolder; text-align: left; margin-bottom: 40px; max-width: 1000px; font-size: 2.2rem; white-space: nowrap; overflow: visible; text-overflow: unset; }
-@media (max-width: 768px) { .headline { font-size: 1.4rem; white-space: normal; text-align: center; } }
-.intro { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; background-color: #0B769F; color: white; border-radius: 8px; padding: 40px 60px; box-shadow: 0 3px 20px rgba(0,0,0,0.1); }
-.intro-text { flex: 1 1 400px; }
-.intro-text h2 { font-size: x-large; margin-top: 0; }
-.intro-text p { line-height: 1.7; margin-bottom: 20px; }
-.Bewerbungsbild { max-width: 380px; height: auto; border-radius: 6px; object-fit: cover; flex-shrink: 0; }
-.more { display: inline-block; background: #fff; color: #0B769F; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s; margin-right: 10px; margin-bottom: 10px; }
-.more:hover { background-color: #004aad; color: #fff; }
-section#documents { margin-top: 80px; background: #fff; border-radius: 10px; padding: 40px 60px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); max-width: 100%; }
-section#documents h3 { color: #004aad; border-bottom: 2px solid #0B769F; margin-bottom: 20px; padding-bottom: 5px; font-weight: 700; }
-section#documents p { margin: 20px 0; }
-footer { background: #0B769F; color: #fff; text-align: center; padding: 20px 0; font-size: 0.9rem; margin-top: 80px; }
+.headline { color: #0B769F; 
+           font-variant: small-caps; 
+           font-weight: bolder; 
+           text-align: left; 
+           margin-bottom: 40px; 
+           max-width: 1000px; 
+           font-size: 2.2rem; 
+           white-space: nowrap; 
+           overflow: visible; 
+           text-overflow: unset; }
+@media (max-width: 768px) 
+  { .headline { 
+    font-size: 1.4rem; 
+    white-space: normal; 
+    text-align: center; } }
+.intro { 
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: center; 
+  gap: 40px; 
+  background-color: #0B769F; 
+  color: white; 
+  border-radius: 8px; 
+  padding: 40px 60px; 
+  box-shadow: 0 3px 20px rgba(0,0,0,0.1); }
+.intro-text { 
+  flex: 1 1 400px; }
+.intro-text h2 { 
+  font-size: x-large; 
+  margin-top: 0; }
+.intro-text p { 
+  line-height: 1.7; 
+  margin-bottom: 20px; }
+.Bewerbungsbild { 
+  max-width: 380px; 
+  height: auto; 
+  border-radius: 6px; 
+  object-fit: cover; 
+  flex-shrink: 0; }
+.more { 
+  display: inline-block; 
+  background: #fff; 
+  color: #0B769F; 
+  padding: 10px 20px; 
+  border-radius: 25px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: all 0.3s; 
+  margin-right: 10px; 
+  margin-bottom: 10px; }
+.more:hover { 
+  background-color: #004aad; 
+  color: #fff; }
+
+footer { 
+  background: #0B769F; 
+  color: #fff; 
+  text-align: center; 
+  padding: 20px 0; 
+  font-size: 0.9rem; 
+  margin-top: 80px; }
 @media (max-width: 768px) {
-  main { padding: 30px 20px; }
-  .intro { flex-direction: column; padding: 30px; }
-  .Bewerbungsbild { width: 90%; margin: 0 auto; }
-  section#documents { padding: 30px; }
-}
+  main { 
+    padding: 30px 20px; }
+  .intro { 
+    flex-direction: column; 
+    padding: 30px; }
+  .Bewerbungsbild { 
+    width: 90%; 
+    margin: 0 auto; }
+
 </style>
+
 </head>
+
+  
 <body>
 <header>
   <button class="burger" onclick="toggleMenu()">☰</button>
@@ -80,15 +135,6 @@ footer { background: #0B769F; color: #fff; text-align: center; padding: 20px 0; 
     <img class="Bewerbungsbild" src="Bewerbungsbild.png" alt="Bewerbungsfoto von Celine Kanis">
   </section>
 
-  <section id="documents">
-    <h3>Lebenslauf & Zeugnisse</h3>
-    <p>
-      <a href="CV_KanisC.pdf" target="_blank" rel="noopener noreferrer" class="more">Lebenslauf ansehen (PDF)</a>
-      <a href="CV_KanisC.pdf" download class="more">Lebenslauf herunterladen (PDF)</a>
-      <a href="Zeugnis1.pdf" target="_blank" rel="noopener noreferrer" class="more">Zeugnis 1 ansehen</a>
-      <a href="Zeugnis2.pdf" target="_blank" rel="noopener noreferrer" class="more">Zeugnis 2 ansehen</a>
-    </p>
-  </section>
 </main>
 
 <footer>
@@ -100,6 +146,7 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 </script>
 </body>
 </html>
+
 
 
 

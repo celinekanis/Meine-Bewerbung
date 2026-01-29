@@ -35,6 +35,146 @@ footer { background:#0B769F; color:white; text-align:center; padding:20px; }
   .burger { display:block; margin:auto; }
   main { padding:30px 25px; margin:40px 20px; }
 }
+  main {
+  background: #fff;
+  border-radius: 10px;
+  padding: 50px 70px;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.1);
+  margin: 70px auto;
+  max-width: 1300px;
+}
+
+/* ===== GRID / COLUMNS ===== */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px;
+  align-items: flex-start;
+}
+
+.left, .right {
+  flex: 1 1 45%;
+  min-width: 320px;
+}
+
+/* ===== HEADINGS ALIGNMENT FIX ===== */
+h1 {
+  color: #004aad;
+  border-bottom: 2px solid #0078d7;
+  padding-bottom: 6px;
+  margin: 0 0 18px 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  min-height: 48px;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  margin-bottom: 36px;
+  padding-top: 4px;
+}
+
+/* ===== LISTS ===== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* ===== CONTACT ===== */
+.contact strong {
+  display: inline-block;
+  width: 135px;
+  color: #004aad;
+}
+
+/* ===== MOTIVATION PHOTO ===== */
+.motivation-section {
+  text-align: center;
+}
+
+.motivation-photo {
+  margin-bottom: 18px;
+}
+
+.motivation-photo img {
+  width: 182px;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.motivation-section p {
+  text-align: left;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #0B769F;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+  margin-top: 60px;
+}
+
+footer a {
+  color: #c4d5e4;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  main {
+    padding: 35px 25px;
+    margin: 40px auto;
+  }
+
+  .flex {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  h1 {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact strong {
+    width: 120px;
+  }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  body {
+    background: white;
+  }
+
+  header, footer {
+    display: none;
+  }
+
+  main {
+    box-shadow: none;
+    margin: 0;
+    padding: 35px;
+  }
+}
 </style>
 </head>
 
@@ -199,6 +339,7 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 
 </body>
 </html>
+
 
 
 

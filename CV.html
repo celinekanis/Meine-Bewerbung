@@ -1,314 +1,345 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lebenslauf – Celine Kanis</title>
-  <style>
-   body {
-      font-family: "Montserrat", sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
-      background-color:#c4d5e4;
-      padding-left: 60px;
-      padding-right: 60px;
-    }
-    
-    main {
-      background: #fff;
-      border-radius: 10px;
-      padding: 50px 70px;
-      box-shadow: 0 3px 20px rgba(0,0,0,0.1);
-      margin: 70px auto;
-      max-width: 1300px; /* angepasst auf Startseiten-Breite */
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lebenslauf – Celine Kanis</title>
 
-    header {
-      background-color: #0B769F;
-      padding: 20px;
-      text-align: center;
-    }
-        
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
+<style>
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color:#c4d5e4;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin: 0;
+  color: #222;
+  line-height: 1.7;
+}
 
-    nav a:hover {
-      color: #c4d5e4;
-    }
+/* ===== HEADER ===== */
+header {
+  background-color: #0B769F;
+  padding: 20px;
+  text-align: center;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 40px;
-      border-radius: 8px;
-    }
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-    h1 {
-      color: #004aad;
-      border-bottom: 2px solid #0078d7;
-      padding-bottom: 5px;
-      margin-top: 0;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
 
-    .section {
-      margin-bottom: 30px;
-    }
+nav a:hover {
+  color: #c4d5e4;
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+/* ===== MAIN CARD ===== */
+main {
+  background: #fff;
+  border-radius: 10px;
+  padding: 50px 70px;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.1);
+  margin: 70px auto;
+  max-width: 1300px;
+}
 
-    ul li {
-      margin-bottom: 8px;
-    }
+/* ===== GRID / COLUMNS ===== */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px;
+  align-items: flex-start;
+}
 
-    .flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
+.left, .right {
+  flex: 1 1 45%;
+  min-width: 320px;
+}
 
-    .left, .right {
-      flex: 1 1 45%;
-      min-width: 350px; 
-    }
+/* ===== HEADINGS ALIGNMENT FIX ===== */
+h1 {
+  color: #004aad;
+  border-bottom: 2px solid #0078d7;
+  padding-bottom: 6px;
+  margin: 0 0 18px 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  min-height: 48px;
+  display: flex;
+  align-items: flex-end;
+}
 
-    .highlight {
-      color: #0078d7;
-      font-weight: 600;
-    }
+/* ===== SECTIONS ===== */
+.section {
+  margin-bottom: 36px;
+  padding-top: 4px;
+}
 
-    footer {
-      background: #0B769F;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 0.9em;
-      border-top: 4px solid #0B769F;
-    }
-    footer a {
-      color: #c4d5e4;
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
+/* ===== LISTS ===== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    .contact ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+ul li {
+  margin-bottom: 8px;
+}
 
-    .contact li {
-      margin-bottom: 6px;
-      word-wrap: break-word;
-    }
+/* ===== CONTACT ===== */
+.contact strong {
+  display: inline-block;
+  width: 135px;
+  color: #004aad;
+}
 
-    .contact strong {
-      display: inline-block;
-      width: 135px;
-      color: #004aad;
-    }
+/* ===== MOTIVATION PHOTO ===== */
+.motivation-section {
+  text-align: center;
+}
 
-    .motivation-section {
-      text-align: center;
-    }
+.motivation-photo {
+  margin-bottom: 18px;
+}
 
-    .motivation-photo {
-      margin-bottom: 20px;
-    }
+.motivation-photo img {
+  width: 182px;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-    .motivation-photo img {
-      width: 182px;
-      height: auto;
-      border-radius: 0;
-      border: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
+.motivation-section p {
+  text-align: left;
+}
 
-    .motivation-section h2 {
-      text-align: center;
-    }
+/* ===== FOOTER ===== */
+footer {
+  background: #0B769F;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+  margin-top: 60px;
+}
 
-    .motivation-section p {
-      text-align: left;
-    }
+footer a {
+  color: #c4d5e4;
+  text-decoration: none;
+}
 
-    @media (max-width: 768px) {
-      .flex {
-        flex-direction: column;
-      }
+footer a:hover {
+  text-decoration: underline;
+}
 
-      .left, .right {
-        min-width: 100%;
-      }
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-      .contact strong {
-        width: 120px;
-      }
-    }
-  </style>
+  main {
+    padding: 35px 25px;
+    margin: 40px auto;
+  }
+
+  .flex {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  h1 {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact strong {
+    width: 120px;
+  }
+}
+
+/* ===== PRINT ===== */
+@media print {
+  body {
+    background: white;
+  }
+
+  header, footer {
+    display: none;
+  }
+
+  main {
+    box-shadow: none;
+    margin: 0;
+    padding: 35px;
+  }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Startseite</a>
-      <a href="about.html">Über mich</a>
-      <a href="motivation.html">Motivation</a>
-      <a href="CV.html">Lebenslauf</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-  </header>
-  <main>
-  <div class="container">
-    <div class="flex">
-    
-      <div class="left">
-        <div class="section contact">
-          <h1>Persönliche Daten</h1>
-          <ul>
-            <li><strong>Name:</strong> Celine Kanis</li>
-            <li><strong>Adresse:</strong> Schweppermannstr. 84, 90408 Nürnberg</li>
-            <li><strong>Telefon:</strong> 0176 414 559 74</li>
-            <li><strong>E‑Mail:</strong>
-              <a href="mailto:celine.kanis@gmail.com">celine.kanis@gmail.com</a>
-            </li>
-            <li><strong>Geburtsdatum:</strong> 02.07.1999</li>
-            <li><strong>Staatsangehörigkeit:</strong> Deutsch</li>
-          </ul>
-        </div>
 
-        <div class="section">
-          <h1>Profil</h1>
-          <p>
-            Motivierte Quereinsteigerin mit Berufserfahrung im Vertrieb und Kundenservice,
-            die ihren Weg in die IT gestartet hat. Ich möchte durch ein Praktikum im Bereich
-            Anwendungsentwicklung praktische Erfahrungen in modernen Software- und Webtechnologien
-            sammeln, um meine Begeisterung für digitale Lösungen und analytisches Denken gezielt
-            einzusetzen und weiterzuentwickeln. Lernbereitschaft, Selbstorganisation und
-            Zielstrebigkeit zeichnen mich besonders aus.
-          </p>
-        </div>
+<header>
+  <nav>
+    <a href="index.html">Startseite</a>
+    <a href="about.html">Über mich</a>
+    <a href="motivation.html">Motivation</a>
+    <a href="CV.html">Lebenslauf</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
 
-        <div class="section">
-          <h1>IT‑Kenntnisse</h1>
-          <ul>
-            <li>Sicherer Umgang mit Microsoft Office</li>
-            <li>Eigenständige Erstellung einer Bewerbungs‑Website mit HTML & CSS</li>
-            <li>Autodidaktisches Lernen zu Programmierung & Webentwicklung</li>
-            <li>Verständnis grundlegender Programmierlogik</li>
-            <li>Erste Erfahrungen mit Python</li>
-          </ul>
-        </div>
+<main>
+  <div class="flex">
 
-        <div class="section">
-          <h1>Sprachen</h1>
-          <ul>
-            <li>Deutsch (Muttersprache)</li>
-            <li>Englisch (gute Kenntnisse in Wort und Schrift)</li>
-            <li>Französisch (Grundkenntnisse)</li>
-          </ul>
-        </div>
+    <!-- ===== LINKE SPALTE ===== -->
+    <div class="left">
 
-        <div class="section">
-          <h1>Hobbys & Interessen</h1>
-          <ul>
-            <li>Entwicklung kleiner Webprojekte (Übungszwecke)</li>
-            <li>Lesen</li>
-            <li>Kochen & kreative Rezepte</li>
-            <li>Wandern & Natur</li>
-          </ul>
-        </div>
+      <div class="section contact">
+        <h1>Persönliche Daten</h1>
+        <ul>
+          <li><strong>Name:</strong> Celine Kanis</li>
+          <li><strong>Adresse:</strong> Schweppermannstr. 84, 90408 Nürnberg</li>
+          <li><strong>Telefon:</strong> 0176 414 559 74</li>
+          <li><strong>E-Mail:</strong> <a href="mailto:celine.kanis@gmail.com">celine.kanis@gmail.com</a></li>
+          <li><strong>Geburtsdatum:</strong> 02.07.1999</li> 
+        </ul>
       </div>
 
-      <!-- Rechte Spalte -->
-      <div class="right">
-        <div class="section motivation-section">
-          <div class="motivation-photo">
-            <img src="Bewerbungsbild.png" alt="Portraitfoto von Celine Kanis">
-          </div>
-
-          <h1>Motivation & Ziel</h1>
-          <p>
-            Ich möchte durch ein Praktikum im Bereich Anwendungsentwicklung nicht nur den
-            Berufsalltag von Fachinformatikern kennenlernen, sondern aktiv erste Schritte in
-            der Programmierung machen. Mein Ziel ist es, dabei Praxiserfahrung zu sammeln,
-            meine technischen Fähigkeiten auszubauen und die Grundlage für eine Umschulung
-            zur Fachinformatikerin für Anwendungsentwicklung zu schaffen.
-          </p>
-          <p>
-            Ich lerne zurzeit eigenständig Programmierlogik und Webentwicklung, um mich
-            optimal auf das Praktikum vorzubereiten und Theorie in der Praxis anzuwenden.
-          </p>
-        </div>
-
-        <div class="section">
-          <h1>Berufliche Laufbahn</h1>
-
-          <p><strong>03/2024 – 11/2025</strong> · Mediaphon telemarketing GmbH / Sellwerk, Nürnberg<br>
-            <em>Sales Managerin</em></p>
-          <ul>
-            <li>Betreuung und Analyse von Kundendaten in CRM‑Systemen</li>
-            <li>Arbeit mit digitalen Vertriebs‑ und Datenplattformen</li>
-            <li>Schulung neuer Kolleg:innen im Umgang mit Software‑Tools</li>
-            <li>Selbstständige Organisation und Priorisierung von Aufgaben</li>
-          </ul>
-
-          <p><strong>11/2020 – 04/2023</strong> · Adviqo GmbH, Nürnberg<br>
-            <em>Mitarbeiterin im Kundenservice</em></p>
-          <ul>
-            <li>Nutzung datenbankgestützter Systeme zur Kundenverwaltung</li>
-            <li>Technisches Anwendungsverständnis bei Online‑Plattformen</li>
-            <li>Präzise Dokumentation von Supportfällen</li>
-          </ul>
-
-          <p><strong>03/2020 – 10/2020</strong> · Davero Dialog GmbH, Erlangen<br>
-            <em>Mitarbeiterin im Rechnungsmanagement</em></p>
-          <ul>
-            <li>Datenerfassung und ‑pflege in internen Systemen</li>
-            <li>Sorgfältige Analyse von Rechnungs‑ und Zahlvorgängen</li>
-          </ul>
-
-          <p><strong>03/2018 – 02/2020</strong> · Vertrieb (Ranger, Impeak, Ever Energy), Nürnberg / Berlin<br>
-            <em>Vertriebsassistentin im Außendienst</em></p>
-          <ul>
-            <li>Kommunikation &amp; Kundenberatung im Direktvertrieb</li>
-            <li>Strukturierte Datenerfassung und selbstständige Routenplanung</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <h1>Schulbildung</h1>
-          <p><strong>09/2015 – 09/2016</strong> · Bildungszentrum „Südpunkt“, Nürnberg<br>
-            <em>Vorbereitung externe Mittlere‑Reife‑Prüfung, Wahlfach: Wirtschaft</em></p>
-
-          <p><strong>07/2015</strong> · Georg‑Holzbauer‑Mittelschule, Nürnberg<br>
-            <em>Abschlussnote: 2,33, Wahlfach: Sozialkunde</em></p>
-
-          <p><strong>09/2009 – 02/2015</strong> · Helene‑Lange‑Gymnasium, Fürth</p>
-          <p><strong>09/2005 – 07/2009</strong> · John‑F.‑Kennedy‑Grundschule, Fürth</p>
-        </div>
+      <div class="section">
+        <h1>Profil</h1>
+        <p>
+          Motivierte Quereinsteigerin mit Berufserfahrung im Vertrieb und Kundenservice,
+          die ihren Weg in die IT gestartet hat. Ich möchte durch ein Praktikum im Bereich
+          Anwendungsentwicklung praktische Erfahrungen in modernen Software- und Webtechnologien
+          sammeln, um meine Begeisterung für digitale Lösungen und analytisches Denken gezielt
+          einzusetzen und weiterzuentwickeln. Lernbereitschaft, Selbstorganisation und
+          Zielstrebigkeit zeichnen mich besonders aus.
+        </p>
       </div>
+
+      <div class="section">
+        <h1>IT-Kenntnisse</h1>
+        <ul>
+          <li>Sicherer Umgang mit Microsoft Office</li>
+          <li>Eigenständige Erstellung einer Bewerbungs-Website mit HTML & CSS</li>
+          <li>Autodidaktisches Lernen zu Programmierung & Webentwicklung</li>
+          <li>Verständnis grundlegender Programmierlogik</li>
+          <li>Erste Erfahrungen mit Python</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h1>Sprachen</h1>
+        <ul>
+          <li>Deutsch (Muttersprache)</li>
+          <li>Englisch (gute Kenntnisse in Wort und Schrift)</li>
+          <li>Französisch (Grundkenntnisse)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h1>Hobbys & Interessen</h1>
+        <ul>
+          <li>Entwicklung kleiner Webprojekte (Übungszwecke)</li>
+          <li>Lesen</li>
+          <li>Kochen & kreative Rezepte</li>
+          <li>Wandern & Natur</li>
+        </ul>
+      </div>
+
     </div>
+
+    <!-- ===== RECHTE SPALTE ===== -->
+    <div class="right">
+
+      <div class="section motivation-section">
+        <div class="motivation-photo">
+          <img src="Bewerbungsbild.png" alt="Portraitfoto von Celine Kanis">
+        </div>
+
+        <h1>Motivation & Ziel</h1>
+        <p>
+          Ich möchte durch ein Praktikum im Bereich Anwendungsentwicklung nicht nur den
+          Berufsalltag von Fachinformatikern kennenlernen, sondern aktiv erste Schritte in
+          der Programmierung machen. Mein Ziel ist es, dabei Praxiserfahrung zu sammeln,
+          meine technischen Fähigkeiten auszubauen und die Grundlage für eine Umschulung
+          zur Fachinformatikerin für Anwendungsentwicklung zu schaffen.
+        </p>
+        <p>
+          Ich lerne zurzeit eigenständig Programmierlogik und Webentwicklung, um mich
+          optimal auf das Praktikum vorzubereiten und Theorie in der Praxis anzuwenden.
+        </p>
+      </div>
+
+      <div class="section">
+        <h1>Berufliche Laufbahn</h1>
+
+        <p><strong>03/2024 – 11/2025</strong> · Mediaphon telemarketing GmbH / Sellwerk, Nürnberg<br>
+        <em>Sales Managerin</em></p>
+        <ul>
+          <li>Betreuung und Analyse von Kundendaten in CRM-Systemen</li>
+          <li>Arbeit mit digitalen Vertriebs- und Datenplattformen</li>
+          <li>Schulung neuer Kolleg:innen im Umgang mit Software-Tools</li>
+          <li>Selbstständige Organisation und Priorisierung von Aufgaben</li>
+        </ul>
+
+        <p><strong>11/2020 – 04/2023</strong> · Adviqo GmbH, Nürnberg<br>
+        <em>Mitarbeiterin im Kundenservice</em></p>
+        <ul>
+          <li>Nutzung datenbankgestützter Systeme zur Kundenverwaltung</li>
+          <li>Technisches Anwendungsverständnis bei Online-Plattformen</li>
+          <li>Präzise Dokumentation von Supportfällen</li>
+        </ul>
+
+        <p><strong>03/2020 – 10/2020</strong> · Davero Dialog GmbH, Erlangen<br>
+        <em>Mitarbeiterin im Rechnungsmanagement</em></p>
+        <ul>
+          <li>Datenerfassung und -pflege in internen Systemen</li>
+          <li>Sorgfältige Analyse von Rechnungs- und Zahlvorgängen</li>
+        </ul>
+
+        <p><strong>03/2018 – 02/2020</strong> · Vertrieb (Ranger, Impeak, Ever Energy), Nürnberg / Berlin<br>
+        <em>Vertriebsassistentin im Außendienst</em></p>
+        <ul>
+          <li>Kommunikation & Kundenberatung im Direktvertrieb</li>
+          <li>Strukturierte Datenerfassung und selbstständige Routenplanung</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h1>Schulbildung</h1>
+
+        <p><strong>09/2015 – 09/2016</strong> · Bildungszentrum „Südpunkt“, Nürnberg<br>
+        <em>Vorbereitung externe Mittlere-Reife-Prüfung, Wahlfach: Wirtschaft</em></p>
+
+        <p><strong>07/2015</strong> · Georg-Holzbauer-Mittelschule, Nürnberg<br>
+        <em>Abschlussnote: 2,33, Wahlfach: Sozialkunde</em></p>
+
+        <p><strong>09/2009 – 02/2015</strong> · Helene-Lange-Gymnasium, Fürth</p>
+        <p><strong>09/2005 – 07/2009</strong> · John-F.-Kennedy-Grundschule, Fürth</p>
+      </div>
+
+    </div>
+
   </div>
-  </main>
-  <footer>
-   <p>© 2026 Celine Kanis | <a href="mailto:celine.kanis@gmail.com">Kontakt aufnehmen</a></p>
-  </footer>
+</main>
+
+<footer>
+  <p>© 2026 Celine Kanis | <a href="mailto:celine.kanis@gmail.com">Kontakt aufnehmen</a></p>
+</footer>
+
 </body>
-
-
 </html>
 
 

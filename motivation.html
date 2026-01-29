@@ -4,30 +4,61 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Motivation – Celine Kanis</title>
-  <link rel="stylesheet" href="style.css">
+
   <style>
+    :root {
+      --primary: #0B769F;
+      --background: #c4d5e4;
+      --text: #222;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
 
     body {
+      margin: 0;
       font-family: "Montserrat", sans-serif;
-      font-optical-sizing: auto;
-      font-style: normal;
-      background-color:#c4d5e4;
-      padding-left: 60px;
-      padding-right: 60px;
+      background-color: var(--background);
+      color: var(--text);
     }
-    
+
+    header {
+      background-color: var(--primary);
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--background);
+    }
+
     main {
-      background: #fff;
+      background: var(--white);
       border-radius: 10px;
       padding: 50px 70px;
       box-shadow: 0 3px 20px rgba(0,0,0,0.1);
+      max-width: 1300px;
       margin: 70px auto;
-      max-width: 1300px; /* angepasst auf Startseiten-Breite */
     }
 
     h1 {
-      color: #0B769F;
-      border-bottom: 3px solid #0B769F;
+      color: var(--primary);
+      border-bottom: 3px solid var(--primary);
       padding-bottom: 8px;
       margin-bottom: 30px;
       font-variant: small-caps;
@@ -36,82 +67,86 @@
     }
 
     p {
-      color: #222;
       line-height: 1.8;
       font-size: 1.05rem;
-      margin-bottom: 25px;
-      margin-top: 10px;
-    }
-
-    header {
-      background-color: #0B769F;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
-
-    nav a:hover {
-      color: #c4d5e4;
+      margin: 10px 0 25px;
     }
 
     footer {
-      background: #0B769F;
-      color: #fff;
+      background: var(--primary);
+      color: var(--white);
       text-align: center;
-      padding: 20px 0;
-      font-size: 0.9em;
-      border-top: 4px solid #0B769F;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 60px;
     }
 
     footer a {
-      color: #c4d5e4;
+      color: var(--background);
       text-decoration: none;
     }
 
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+
+      main {
+        padding: 30px 25px;
+        margin: 40px 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 1.7rem;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Startseite</a>
-      <a href="about.html">Über mich</a>
-      <a href="motivation.html">Motivation</a>
-      <a href="CV.html">Lebenslauf</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Meine Motivation</h1>
-    <p>Softwareentwicklung verbindet für mich Logik, Kreativität und den Reiz, durch präzises Denken echte Lösungen zu schaffen. Genau diese Mischung begeistert und motiviert mich, meinen bisherigen Weg neu auszurichten.</p>
+<header>
+  <nav>
+    <a href="index.html">Startseite</a>
+    <a href="about.html">Über mich</a>
+    <a href="motivation.html">Motivation</a>
+    <a href="CV.html">Lebenslauf</a>
+    <a href="dokumente.html">Dokumente</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
 
-    <p>Ich möchte durch ein <strong>Praktikum im Bereich Anwendungsentwicklung</strong> nicht nur beobachten, wie Fachinformatiker arbeiten, sondern selbst aktiv daran teilnehmen – Code schreiben, Probleme lösen, Strukturen verstehen. Denn nur durch Praxis kann aus Interesse echte Kompetenz werden.</p>
+<main>
+  <h1>Meine Motivation</h1>
 
-    <p>Mein Ziel ist es, in einem professionellen Umfeld <strong>erste Erfahrungen mit Programmiersprachen, Entwicklungsprozessen und Teamarbeit</strong> zu sammeln. Besonders reizt mich, mitzuerleben, wie aus Ideen funktionierende Anwendungen entstehen – Schritt für Schritt, durch Logik, Struktur und Zusammenarbeit.</p>
+  <p>Softwareentwicklung verbindet für mich Logik, Kreativität und den Reiz, durch präzises Denken echte Lösungen zu schaffen. Genau diese Mischung begeistert mich und motiviert mich, meinen bisherigen Weg neu auszurichten.</p>
 
-    <p>Um bestmöglich vorbereitet zu sein, lerne ich derzeit <strong>eigenständig die Grundlagen der Programmierlogik und Webentwicklung</strong>. Ich beschäftige mich mit <strong>HTML, CSS und Python</strong>, um den Aufbau moderner Anwendungen zu verstehen und ein Gefühl dafür zu entwickeln, wie Programmteile ineinandergreifen.</p>
+  <p>Ich möchte durch ein <strong>Praktikum im Bereich Anwendungsentwicklung</strong> nicht nur beobachten, wie Fachinformatiker arbeiten, sondern selbst aktiv daran teilnehmen – Code schreiben, Probleme lösen, Strukturen verstehen.</p>
 
-    <p>Mich treibt die Überzeugung an, dass man nie aufhören sollte, zu lernen – besonders in einer Branche, die sich so schnell weiterentwickelt wie die IT. Dieses Praktikum sehe ich daher nicht nur als Einstieg in ein neues Berufsfeld, sondern auch als <strong>Sprungbrett für meine geplante Umschulung zur Fachinformatikerin für Anwendungsentwicklung</strong>.</p>
+  <p>Mein Ziel ist es, in einem professionellen Umfeld <strong>erste Erfahrungen mit Programmiersprachen, Entwicklungsprozessen und Teamarbeit</strong> zu sammeln.</p>
 
-    <p>Ich bringe Neugier, Durchhaltevermögen und Offenheit für Neues mit. Was mich antreibt, ist der Gedanke, mit Code etwas von Grund auf entstehen zu lassen – etwas, das funktioniert, anderen nützt und das Ergebnis eigener logischer Ideen ist.</p>
-  </main>
+  <p>Derzeit lerne ich <strong>eigenständig die Grundlagen der Programmierlogik und Webentwicklung</strong> und beschäftige mich intensiv mit <strong>HTML, CSS und Python</strong>.</p>
 
-  <footer>
-    <p>© 2026 Celine Kanis | <a href="mailto:celine.kanis@example.com">Kontakt aufnehmen</a></p>
-  </footer>
+  <p>Dieses Praktikum sehe ich als <strong>Sprungbrett für meine geplante Umschulung zur Fachinformatikerin für Anwendungsentwicklung</strong>.</p>
+
+  <p>Was mich antreibt, ist der Gedanke, mit Code etwas von Grund auf entstehen zu lassen – etwas, das funktioniert, anderen nützt und das Ergebnis eigener logischer Ideen ist.</p>
+</main>
+
+<footer>
+  <p>© 2026 Celine Kanis | <a href="mailto:celine.kanis@example.com">Kontakt aufnehmen</a></p>
+</footer>
+
 </body>
 </html>
-
-
-
-

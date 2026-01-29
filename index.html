@@ -50,16 +50,26 @@
       padding: 60px;
     }
 
-    /* ===== Hero / Intro Section ===== */
-    .headline {
-      color: #0B769F;
-      font-variant: small-caps;
-      font-weight: bolder;
-      text-align: left;
-      margin-bottom: 40px;
-      max-width: 1000px;
-    }
-
+  .headline {
+  color: #0B769F;
+  font-variant: small-caps;
+  font-weight: bolder;
+  text-align: left;
+  margin-bottom: 40px;
+  max-width: 1000px;
+  font-size: 2.2rem;
+  white-space: nowrap;       /* bleibt eine Zeile */
+  overflow: visible;         /* volle Breite anzeigen */
+  text-overflow: unset;      /* keine Ellipsen mehr */
+}
+/* Mobile Anpassung */
+@media (max-width: 768px) {
+  .headline {
+    font-size: 1.4rem;
+    white-space: normal;     /* darf umbrechen */
+    text-align: center;
+  }
+}
     .intro {
       display: flex;
       flex-wrap: wrap;
@@ -120,7 +130,18 @@
       border-radius: 10px;
       padding: 40px 60px;
       box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-      max-width: 900px;
+      max-width: 100%;
+    }
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      background-color: #0B769F;
+      color: white;
+      border-radius: 8px;
+      padding: 40px 60px;
+      box-shadow: 0 3px 20px rgba(0,0,0,0.1);
     }
 
     section#documents h3 {
@@ -178,7 +199,7 @@
     <nav aria-label="Hauptnavigation">
       <ul>
         <li><a href="index.html">Startseite</a></li>
-        <li><a href="über.html">Über mich</a></li>
+        <li><a href="about.html">Über mich</a></li>
         <li><a href="motivation.html">Motivation</a></li>
         <li><a href="CV.html">Lebenslauf</a></li>
         <li><a href="dokumente.html">Dokumente</a></li>
@@ -199,7 +220,7 @@
           Ich lerne derzeit Webentwicklung und möchte in einem IT‑Praktikum meine Liebe zum logischen Denken und Problemlösen mit echter Praxiserfahrung verbinden.
         </p>
         <div class="button-group">
-          <a href="über.html" class="more">Mehr über mich</a>
+          <a href="about.html" class="more">Mehr über mich</a>
           <a href="motivation.html" class="more">Motivation</a>
           <a href="CV.html" target="_blank" rel="noopener noreferrer" class="more">Lebenslauf ansehen</a>
           <a href="kontakt.html" class="more">Kontakt</a>

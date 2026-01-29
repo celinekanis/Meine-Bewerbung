@@ -12,27 +12,21 @@
 body { margin: 0; font-family: "Montserrat", sans-serif; background-color: #c4d5e4; color: #222; }
 header { background:#0B769F; padding:20px; }
 
-.burger {
-  display:none;
-  font-size:1.8rem;
-  background:none;
-  border:none;
-  color:white;
-  cursor:pointer;
-}
+nav ul { list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin:0; padding:0; }
+nav ul li { margin:0; }
 
-nav { display:flex; justify-content:center; flex-wrap:wrap; gap:18px; }
-
-nav a { color:white; text-decoration:none; font-weight:bold; }
-
+nav a { color:white; text-decoration:none; font-weight:bold; transition:color 0.3s; }
 nav a:hover { color:#c4d5e4; }
 
-  @media(max-width:768px){
-  nav { display:none; flex-direction:column; }
-  nav.active { display:flex; }
+.burger { display:none; font-size:1.8rem; background:none; border:none; color:white; cursor:pointer; }
+
+@media(max-width:768px){
+  nav { display:none; }
+  nav.active { display:block; }
+  nav ul { flex-direction:column; gap:12px; text-align:center; }
   .burger { display:block; margin:auto; }
-  main { padding:30px 25px; margin:40px 20px; }
 }
+
 
 
 /* Rest Styles bleiben unverändert */
@@ -117,6 +111,7 @@ footer {
 <header>
   <button class="burger" onclick="toggleMenu()">☰</button>
   <nav id="nav" aria-label="Hauptnavigation">
+    <ul>
       <li><a href="index.html">Startseite</a></li>
       <li><a href="about.html">Über mich</a></li>
       <li><a href="motivation.html">Motivation</a></li>
@@ -124,8 +119,13 @@ footer {
       <li><a href="dokumente.html">Dokumente</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
   </nav>
 </header>
+
+<script>
+function toggleMenu(){ document.getElementById("nav").classList.toggle("active"); }
+</script>
 
 <main>
   <h1 class="headline">Bewerbung für ein Praktikum als Fachinformatikerin für Anwendungsentwicklung</h1>
@@ -149,11 +149,9 @@ footer {
   <p>© 2026 Celine Kanis</p>
 </footer>
 
-<script>
-function toggleMenu(){ document.getElementById("nav").classList.toggle("active"); }
-</script>
 </body>
 </html>
+
 
 
 

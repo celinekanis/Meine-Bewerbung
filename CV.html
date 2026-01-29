@@ -6,53 +6,64 @@
 <title>Lebenslauf – Celine Kanis</title>
 
 <style>
-body { margin:0; font-family:Montserrat,sans-serif; background:#c4d5e4; color:#222; line-height:1.7; }
+* {
+  box-sizing: border-box;
+}
 
-header { background:#0B769F; padding:20px; }
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color:#c4d5e4;
+  margin: 0;
+  color: #222;
+  line-height: 1.7;
+}
 
-.burger { display:none; font-size:1.8rem; background:none; border:none; color:white; }
+/* ===== HEADER ===== */
+header {
+  background-color: #0B769F;
+  padding: 18px 12px;
+}
 
-nav { display:flex; justify-content:center; flex-wrap:wrap; gap:18px; }
+nav ul { list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin:0; padding:0; }
+nav ul li { margin:0; }
 
-nav a { color:white; text-decoration:none; font-weight:bold; }
+nav a { color:white; text-decoration:none; font-weight:bold; transition:color 0.3s; }
 nav a:hover { color:#c4d5e4; }
 
-
-
-h2 { color:#0B769F; margin-top:30px; margin-bottom:10px; }
-
-
-footer { background:#0B769F; color:white; text-align:center; padding:20px; }
+.burger { display:none; font-size:1.8rem; background:none; border:none; color:white; cursor:pointer; }
 
 @media(max-width:768px){
-  nav { display:none; flex-direction:column; }
-  nav.active { display:flex; }
+  nav { display:none; }
+  nav.active { display:block; }
+  nav ul { flex-direction:column; gap:12px; text-align:center; }
   .burger { display:block; margin:auto; }
-  main { padding:30px 25px; margin:40px 20px; }
-}
-  main {
-  background: #fff;
-  border-radius: 10px;
-  padding: 50px 70px;
-  box-shadow: 0 3px 20px rgba(0,0,0,0.1);
-  margin: 70px auto;
-  max-width: 1300px;
 }
 
-/* ===== GRID / COLUMNS ===== */
+
+/* ===== MAIN CARD ===== */
+main {
+  background: #fff;
+  border-radius: 12px;
+  padding: 50px 70px;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.1);
+  max-width: 1300px;
+  margin: 60px auto;
+  overflow: hidden; /* verhindert Überlaufen */
+}
+
+/* ===== GRID ===== */
 .flex {
   display: flex;
   flex-wrap: wrap;
   gap: 55px;
-  align-items: flex-start;
 }
 
 .left, .right {
   flex: 1 1 45%;
-  min-width: 320px;
+  min-width: 300px;
 }
 
-/* ===== HEADINGS ALIGNMENT FIX ===== */
+/* ===== HEADINGS FIX ===== */
 h1 {
   color: #004aad;
   border-bottom: 2px solid #0078d7;
@@ -60,15 +71,15 @@ h1 {
   margin: 0 0 18px 0;
   font-size: 1.45rem;
   font-weight: 700;
-  min-height: 48px;
+  min-height: 46px;
   display: flex;
   align-items: flex-end;
+  word-break: break-word;
 }
 
 /* ===== SECTIONS ===== */
 .section {
-  margin-bottom: 36px;
-  padding-top: 4px;
+  margin-bottom: 34px;
 }
 
 /* ===== LISTS ===== */
@@ -80,6 +91,7 @@ ul {
 
 ul li {
   margin-bottom: 8px;
+  word-break: break-word;
 }
 
 /* ===== CONTACT ===== */
@@ -89,23 +101,16 @@ ul li {
   color: #004aad;
 }
 
-/* ===== MOTIVATION PHOTO ===== */
+/* ===== IMAGE ===== */
 .motivation-section {
   text-align: center;
 }
 
-.motivation-photo {
-  margin-bottom: 18px;
-}
-
 .motivation-photo img {
-  width: 182px;
-  height: auto;
+  width: 175px;
+  max-width: 100%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.motivation-section p {
-  text-align: left;
+  margin-bottom: 16px;
 }
 
 /* ===== FOOTER ===== */
@@ -113,7 +118,7 @@ footer {
   background: #0B769F;
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  padding: 18px;
   font-size: 0.9em;
   margin-top: 60px;
 }
@@ -127,30 +132,32 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE MOBILE ===== */
 @media (max-width: 900px) {
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 
   main {
-    padding: 35px 25px;
-    margin: 40px auto;
+    padding: 28px 20px;
+    margin: 30px 14px;
+    border-radius: 10px;
   }
 
   .flex {
     flex-direction: column;
-    gap: 40px;
+    gap: 36px;
   }
 
   h1 {
+    font-size: 1.25rem;
     justify-content: center;
     text-align: center;
   }
 
   .contact strong {
     width: 120px;
+  }
+
+  nav {
+    gap: 12px;
   }
 }
 
@@ -167,7 +174,7 @@ footer a:hover {
   main {
     box-shadow: none;
     margin: 0;
-    padding: 35px;
+    padding: 32px;
   }
 }
 </style>
@@ -176,20 +183,26 @@ footer a:hover {
 <body>
 
 <header>
-<button class="burger" onclick="toggleMenu()">☰</button>
-<nav id="nav">
-  <a href="index.html">Startseite</a>
-  <a href="about.html">Über mich</a>
-  <a href="motivation.html">Motivation</a>
-  <a href="CV.html">Lebenslauf</a>
-  <a href="dokumente.html">Dokumente</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="kontakt.html">Kontakt</a>
-</nav>
+  <button class="burger" onclick="toggleMenu()">☰</button>
+  <nav id="nav" aria-label="Hauptnavigation">
+    <ul>
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="about.html">Über mich</a></li>
+      <li><a href="motivation.html">Motivation</a></li>
+      <li><a href="CV.html">Lebenslauf</a></li>
+      <li><a href="dokumente.html">Dokumente</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
 </header>
 
+<script>
+function toggleMenu(){ document.getElementById("nav").classList.toggle("active"); }
+</script>
+
 <main>
-<div class="flex">
+  <div class="flex">
 
     <!-- ===== LINKE SPALTE ===== -->
     <div class="left">
@@ -322,17 +335,15 @@ footer a:hover {
     </div>
 
   </div>
-
 </main>
 
-<footer>© 2026 Celine Kanis</footer>
-
-<script>
-function toggleMenu(){ document.getElementById("nav").classList.toggle("active"); }
-</script>
+<footer>
+  <p>© 2026 Celine Kanis | <a href="mailto:celine.kanis@gmail.com">Kontakt aufnehmen</a></p>
+</footer>
 
 </body>
 </html>
+
 
 
 

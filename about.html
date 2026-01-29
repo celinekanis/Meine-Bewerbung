@@ -1,139 +1,91 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Über mich – Celine Kanis</title>
-  
-<style>
-:root { 
-  --primary: #0B769F; 
-  --background: #c4d5e4; 
-  --text: #222; 
-  --white: #ffffff; }
-* { box-sizing: border-box; }
-body { 
-  margin: 0; 
-  font-family: "Montserrat", sans-serif; 
-  background-color: var(--background); 
-  color: var(--text); }
-header { 
-  background-color: var(--primary); 
-  padding: 20px; 
-  position: relative; }
-nav ul { 
-  list-style: none; 
-  margin: 0; 
-  padding: 0; 
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: center; 
-  gap: 20px; }
-nav ul li { 
-  margin: 0; }
-nav a { 
-  color: var(--white); 
-  text-decoration: none; 
-  font-weight: bold; 
-  transition: color 0.3s; }
-nav a:hover { 
-  color: var(--background); }
 
-/* Burger Menü */
-.burger { 
-  display: none; 
-  font-size: 1.8rem; 
-  background: none; 
-  border: none; 
-  color: white; 
-  cursor: pointer; 
-  position: absolute; 
-  top: 18px; 
-  right: 20px; }
-@media(
-  max-width:768px) {
-  nav { 
-    display: none; 
-    width: 100%; }
-  nav.active { 
-    display: block; }
-  nav ul { 
-    flex-direction: column; 
-    gap: 12px; text-align: center; }
-  .burger { 
-    display: block; }
+<style>
+body { margin:0; font-family:Montserrat,sans-serif; background:#c4d5e4; color:#222; }
+
+header { background:#0B769F; padding:20px; }
+
+.burger {
+  display:none;
+  font-size:1.8rem;
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
 }
 
-/* Main Styles */
-main { 
-  background: var(--white); 
-  border-radius: 10px; 
-  padding: 50px 70px; 
-  box-shadow: 0 3px 20px rgba(0,0,0,0.1); 
-  max-width: 1300px; 
-  margin: 60px auto; }
-h1 { 
-  color: var(--primary); 
-  border-bottom: 3px solid var(--primary); 
-  padding-bottom: 8px; 
-  margin-bottom: 30px; 
-  font-variant: small-caps; 
-  font-weight: bolder; }
-p { 
-  line-height: 1.8; 
-  font-size: 1.05rem; 
-  margin: 10px 0 25px; }
-footer { 
-  background: var(--primary); 
-  color: #fff; 
-  text-align: center; 
-  padding: 20px; 
-  font-size: 0.9rem; }
-footer a { 
-  color: var(--background); 
-  text-decoration: none; }
-footer a:hover { 
-  text-decoration: underline; }
-@media(
-  max-width:768px){ 
-  main { padding:30px 25px; 
-        margin:40px 20px; } 
-  p{ font-size:1rem; } }
+nav { display:flex; justify-content:center; flex-wrap:wrap; gap:18px; }
+
+nav a { color:white; text-decoration:none; font-weight:bold; }
+
+nav a:hover { color:#c4d5e4; }
+
+main {
+  background:white;
+  max-width:1100px;
+  margin:60px auto;
+  padding:50px 70px;
+  border-radius:12px;
+  box-shadow:0 4px 20px rgba(0,0,0,.1);
+}
+
+h1 { color:#0B769F; border-bottom:3px solid #0B769F; padding-bottom:8px; font-variant:small-caps; margin-bottom:25px; }
+
+p { line-height:1.8; margin-bottom:20px; }
+
+footer { background:#0B769F; color:white; text-align:center; padding:20px; }
+
+@media(max-width:768px){
+  nav { display:none; flex-direction:column; }
+  nav.active { display:flex; }
+  .burger { display:block; margin:auto; }
+  main { padding:30px 25px; margin:40px 20px; }
+}
 </style>
 </head>
-  
+
 <body>
+
 <header>
-  <button class="burger" onclick="toggleMenu()">☰</button>
-  <nav id="nav" aria-label="Hauptnavigation">
-    <ul>
-      <li><a href="index.html">Startseite</a></li>
-      <li><a href="about.html">Über mich</a></li>
-      <li><a href="motivation.html">Motivation</a></li>
-      <li><a href="CV.html">Lebenslauf</a></li>
-      <li><a href="dokumente.html">Dokumente</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="kontakt.html">Kontakt</a></li>
-    </ul>
-  </nav>
+<button class="burger" onclick="toggleMenu()">☰</button>
+<nav id="nav">
+  <a href="index.html">Startseite</a>
+  <a href="about.html">Über mich</a>
+  <a href="motivation.html">Motivation</a>
+  <a href="CV.html">Lebenslauf</a>
+  <a href="dokumente.html">Dokumente</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
 </header>
 
 <main>
 <h1>Über mich</h1>
+
 <p>Hallo, ich bin <strong>Celine Kanis</strong>, 26 Jahre jung – neugierig, wissbegierig und gerade mitten auf meinem spannenden Weg in die <strong>IT-Welt</strong>.</p>
-<p>Nach mehreren Jahren im <strong>Vertrieb</strong> und <strong>Kundenservice</strong> habe ich gemerkt, dass mir vor allem die <strong>logischen Strukturen</strong> und das <strong>kreative Problemlösen</strong> in der Arbeit am meisten Freude bereiten.</p>
-<p>Derzeit bringe ich mir autodidaktisch die Grundlagen in <strong>Webentwicklung</strong>, <strong>HTML</strong>, <strong>CSS</strong> und <strong>Python</strong> bei. Jeder neue Lernschritt bestätigt mich darin, dass ich auf dem richtigen Weg bin.</p>
-<p>Mein nächstes Ziel ist ein <strong>Praktikum im Bereich Anwendungsentwicklung</strong>, um praktische Erfahrung zu sammeln und zu verstehen, wie Software im Team entsteht.</p>
-<p>Ich beschreibe mich als <strong>strukturiert, lernfreudig und lösungsorientiert</strong> – Eigenschaften, die ich aus meinen bisherigen Berufserfahrungen mitbringe und nun mit meiner Begeisterung für IT verbinde.</p>
-<p>Diese Website soll meinen Weg dokumentieren – meine Lernfortschritte, Projekte und Aha-Momente. Vielleicht inspiriert sie auch andere, den Schritt in die IT zu wagen.</p>
+
+  <p>Nach mehreren Jahren im <strong>Vertrieb</strong> und <strong>Kundenservice</strong> habe ich gemerkt, dass mir vor allem die <strong>logischen Strukturen</strong> und das <strong>kreative Problemlösen</strong> in der Arbeit am meisten Freude bereiten.</p>
+
+  <p>Derzeit bringe ich mir autodidaktisch die Grundlagen in <strong>Webentwicklung</strong>, <strong>HTML</strong>, <strong>CSS</strong> und <strong>Python</strong> bei. Jeder neue Lernschritt bestätigt mich darin, dass ich auf dem richtigen Weg bin.</p>
+
+  <p>Mein nächstes Ziel ist ein <strong>Praktikum im Bereich Anwendungsentwicklung</strong>, um praktische Erfahrung zu sammeln und zu verstehen, wie Software im Team entsteht.</p>
+
+  <p>Ich beschreibe mich als <strong>strukturiert, lernfreudig und lösungsorientiert</strong> – Eigenschaften, die ich aus meinen bisherigen Berufserfahrungen mitbringe und nun mit meiner Begeisterung für IT verbinde.</p>
+
+  <p>Diese Website soll meinen Weg dokumentieren – meine Lernfortschritte, Projekte und Aha-Momente. Vielleicht inspiriert sie auch andere, den Schritt in die IT zu wagen.</p>
+
 </main>
 
-<footer>
-<p>© 2026 Celine Kanis | <a href="mailto:celine.kanis@example.com">Kontakt aufnehmen</a></p>
-</footer>
+<footer>© 2026 Celine Kanis</footer>
 
 <script>
 function toggleMenu(){ document.getElementById("nav").classList.toggle("active"); }
 </script>
+
 </body>
 </html>

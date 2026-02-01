@@ -8,50 +8,101 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
+
+  <style>
+    
   :root {
   --primary:#0B769F;
   --background:#c4d5e4;
   --text:#222;
   --white:#fff;
 }
-body { margin: 0; font-family: "Montserrat", sans-serif; background-color: #c4d5e4; color: #222; }
-header { background:#0B769F; padding:20px; }
-
-nav ul { list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin:0; padding:0; }
-nav ul li { margin:0; }
-
-nav a { color:white; text-decoration:none; font-weight:bold; transition:color 0.3s; }
-nav a:hover { color:#c4d5e4; }
-
-.burger { display:none; font-size:1.8rem; background:none; border:none; color:white; cursor:pointer; }
-
-@media(max-width:768px){
-  nav { display:none; }
-  nav.active { display:block; }
-  nav ul { flex-direction:column; gap:12px; text-align:center; }
-  .burger { display:block; margin:auto; }
+    
+body { 
+  margin: 0; 
+  font-family: "Montserrat", 
+  sans-serif; 
+  background-color: #c4d5e4; 
+  color: #222; 
+}
+  
+header { 
+  background:#0B769F; 
+  padding:20px; 
 }
 
+nav ul { 
+  list-style:none; 
+  display:flex; 
+  flex-wrap:wrap; 
+  justify-content:center; 
+  gap:15px; 
+  margin:0; 
+  padding:0; 
+}
+    
+nav ul li { 
+  margin:0; 
+}
 
+nav a { 
+  color:white; 
+  text-decoration:none; 
+  font-weight:bold; 
+  transition:color 0.3s; 
+}
+    
+nav a:hover { 
+  color:#c4d5e4; 
+}
 
-/* Rest Styles bleiben unverändert */
-main { padding: 60px; }
-.headline { color: #0B769F; 
-           font-variant: small-caps; 
-           font-weight: bolder; 
-           text-align: left; 
-           margin-bottom: 40px; 
-           max-width: 1000px; 
-           font-size: 2.2rem; 
-           white-space: nowrap; 
-           overflow: visible; 
-           text-overflow: unset; }
+.burger { 
+  display:none; 
+  font-size:1.8rem; 
+  background:none; 
+  border:none; 
+  color:white; 
+  cursor:pointer; 
+}
+
+@media(max-width:768px)
+  {
+  nav { 
+    display:none; }
+  nav.active { 
+    display:block; }
+  nav ul { 
+    flex-direction:column; 
+    gap:12px; 
+    text-align:center; }
+  .burger { 
+    display:block; 
+    margin:auto; }
+}
+
+main { 
+  padding: 60px; 
+}
+    
+.headline { 
+  color: #0B769F; 
+  font-variant: small-caps; 
+  font-weight: bolder; 
+  text-align: left; 
+  margin-bottom: 40px; 
+  max-width: 1000px; 
+  font-size: 2.2rem; 
+  white-space: nowrap; 
+  overflow: visible; 
+  text-overflow: unset; }
+    
 @media (max-width: 768px) 
   { .headline { 
     font-size: 1.4rem; 
     white-space: normal; 
-    text-align: center; } }
+    text-align: center; } 
+  }
+    
 .intro { 
   display: flex; 
   flex-wrap: wrap; 
@@ -61,21 +112,31 @@ main { padding: 60px; }
   color: white; 
   border-radius: 8px; 
   padding: 40px 60px; 
-  box-shadow: 0 3px 20px rgba(0,0,0,0.1); }
+  box-shadow: 0 3px 20px rgba(0,0,0,0.1); 
+}
+    
 .intro-text { 
-  flex: 1 1 400px; }
+  flex: 1 1 400px; 
+}
+    
 .intro-text h2 { 
   font-size: x-large; 
-  margin-top: 0; }
+  margin-top: 0; 
+}
+    
 .intro-text p { 
   line-height: 1.7; 
-  margin-bottom: 20px; }
+  margin-bottom: 20px; 
+}
+    
 .Bewerbungsbild { 
   max-width: 380px; 
   height: auto; 
   border-radius: 6px; 
   object-fit: cover; 
-  flex-shrink: 0; }
+  flex-shrink: 0; 
+}
+    
 .more { 
   display: inline-block; 
   background: #fff; 
@@ -86,10 +147,13 @@ main { padding: 60px; }
   font-weight: bold; 
   transition: all 0.3s; 
   margin-right: 10px; 
-  margin-bottom: 10px; }
+  margin-bottom: 10px; 
+}
+    
 .more:hover { 
   background-color: #004aad; 
-  color: #fff; }
+  color: #fff; 
+}
 
 footer {
       background: var(--primary);
@@ -98,19 +162,19 @@ footer {
       padding: 20px;
       font-size: 0.9rem;
       margin-top: 60px;
-    }
+}
 
     footer a {
       color: var(--background);
       text-decoration: none;
-    }
+}
 
     footer a:hover {
       text-decoration: underline;
-    }
+}
   
-@media (max-width: 768px) {
-  main { 
+@media (max-width: 768px) 
+  { main { 
     padding: 30px 20px; }
   .intro { 
     flex-direction: column; 
@@ -125,7 +189,9 @@ footer {
 
   
 <body>
+  
 <header>
+  
   <button class="burger" onclick="toggleMenu()">☰</button>
   <nav id="nav" aria-label="Hauptnavigation">
     <ul>
@@ -138,6 +204,7 @@ footer {
       <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
   </nav>
+  
 </header>
 
 <script>
@@ -145,7 +212,9 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 </script>
 
 <main>
+  
   <h1 class="headline">Bewerbung für ein Praktikum als Fachinformatikerin für Anwendungsentwicklung</h1>
+  
   <section class="intro">
     <div class="intro-text">
       <h2>Hallo!</h2>
@@ -168,6 +237,7 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 
 </body>
 </html>
+
 
 
 

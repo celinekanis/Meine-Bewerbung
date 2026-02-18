@@ -6,15 +6,24 @@
 <title>Über mich – Celine Kanis</title>
 
 <style>
+  
   :root {
   --primary:#0B769F;
   --background:#c4d5e4;
   --text:#222;
   --white:#fff;
 }
-body { margin:0; font-family:Montserrat,sans-serif; background:#c4d5e4; color:#222; }
+  
+body { 
+  margin:0; 
+  font-family:Montserrat, sans-serif; 
+  background:#c4d5e4; 
+  color:#222; 
+}
 
-header { background:#0B769F; padding:20px; }
+header { 
+  background:#0B769F; 
+  padding:20px; }
 
 .burger {
   display:none;
@@ -25,11 +34,22 @@ header { background:#0B769F; padding:20px; }
   cursor:pointer;
 }
 
-nav { display:flex; justify-content:center; flex-wrap:wrap; gap:18px; }
+nav { 
+  display:flex; 
+  justify-content:center; 
+  flex-wrap:wrap; 
+  gap:18px; 
+}
 
-nav a { color:white; text-decoration:none; font-weight:bold; }
+nav a { 
+  color:white; 
+  text-decoration:none; 
+  font-weight:bold; 
+}
 
-nav a:hover { color:#c4d5e4; }
+nav a:hover { 
+  color:#c4d5e4; 
+}
 
 main {
   background:white;
@@ -40,9 +60,18 @@ main {
   box-shadow:0 4px 20px rgba(0,0,0,.1);
 }
 
-h1 { color:#0B769F; border-bottom:3px solid #0B769F; padding-bottom:8px; font-variant:small-caps; margin-bottom:25px; }
+h1 { 
+  color:#0B769F; 
+  border-bottom:3px solid #0B769F; 
+  padding-bottom:8px; 
+  font-variant:small-caps; 
+  margin-bottom:25px; 
+}
 
-p { line-height:1.8; margin-bottom:20px; }
+p { 
+  line-height:1.8; 
+  margin-bottom:20px; 
+}
 
 footer {
       background: var(--primary);
@@ -53,21 +82,37 @@ footer {
       margin-top: 60px;
     }
 
-    footer a {
+footer a {
       color: var(--background);
       text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-@media(max-width:768px){
-  nav { display:none; flex-direction:column; }
-  nav.active { display:flex; }
-  .burger { display:block; margin:auto; }
-  main { padding:30px 25px; margin:40px 20px; }
 }
+
+footer a:hover {
+      text-decoration: underline;
+}
+  
+@media(max-width:768px){
+  nav { 
+    display:none; 
+    flex-direction:column; 
+  }
+  
+  nav.active { 
+    display:flex; 
+  }
+  .burger { 
+    display:block; 
+    margin:auto; 
+  }
+  main { 
+    padding:30px 25px; 
+    margin:40px 20px; 
+  }
+  }
+  
 </style>
+
+  
 </head>
 
 <body>
@@ -86,19 +131,20 @@ footer {
 </header>
 
 <main>
+  
 <h1>Über mich</h1>
 
 <p>Hallo, ich bin <strong>Celine Kanis</strong>, 26 Jahre jung – neugierig, wissbegierig und gerade mitten auf meinem spannenden Weg in die <strong>IT-Welt</strong>.</p>
 
-  <p>Nach mehreren Jahren im <strong>Vertrieb</strong> und <strong>Kundenservice</strong> habe ich gemerkt, dass mir vor allem die <strong>logischen Strukturen</strong> und das <strong>kreative Problemlösen</strong> in der Arbeit am meisten Freude bereiten.</p>
+  <p>Nach mehreren Jahren im <strong>Vertrieb</strong> und im <strong>Kundenservice</strong> habe ich gemerkt, dass mir vor allem die <strong>logischen Strukturen</strong> und die <strong>kreative Problemlösung</strong> in der Arbeit am meisten Freude bereiten.</p>
 
-  <p>Derzeit bringe ich mir autodidaktisch die Grundlagen in <strong>Webentwicklung</strong>, <strong>HTML</strong>, <strong>CSS</strong> und <strong>Python</strong> bei. Jeder neue Lernschritt bestätigt mich darin, dass ich auf dem richtigen Weg bin.</p>
+  <p>Derzeit bringe ich mir selbstständig die Grundlagen in <strong>Webentwicklung</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> und <strong>Python</strong> bei. Dies macht unglaublich Spaß und jeder neue Lernschritt bestätigt mich darin, dass ich auf dem richtigen Weg bin.</p>
 
-  <p>Mein nächstes Ziel ist ein <strong>Praktikum im Bereich Anwendungsentwicklung</strong>, um praktische Erfahrung zu sammeln und zu verstehen, wie Software im Team entsteht.</p>
+  <p>Mein nächstes Ziel ist ein <strong>Praktikum im Bereich Anwendungsentwicklung</strong>, um praktische Erfahrung zu sammeln und um zu verstehen, wie Software im Team entsteht.</p>
 
-  <p>Ich beschreibe mich als <strong>strukturiert, lernfreudig und lösungsorientiert</strong> – Eigenschaften, die ich aus meinen bisherigen Berufserfahrungen mitbringe und nun mit meiner Begeisterung für IT verbinde.</p>
+  <p>Ich beschreibe mich als <strong>strukturiert, lernfreudig und lösungsorientiert</strong> – Eigenschaften, die ich aus meinen bisherigen Berufserfahrungen mitbringe und nun mit meiner Begeisterung für IT verbinden darf.</p>
 
-  <p>Diese Website soll meinen Weg dokumentieren – meine Lernfortschritte, Projekte und Aha-Momente. Vielleicht inspiriert sie auch andere, den Schritt in die IT zu wagen.</p>
+  <p>Diese Website soll meinen Weg dokumentieren – meine Lernfortschritte, Projekte und Aha-Momente. Sie ist bei Weitem noch nicht perfekt, aber in ständiger Überarbeitung und Erweiterung, um Neuerlerntes umzusetzen.</p>
 
 </main>
 
@@ -112,5 +158,6 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 
 </body>
 </html>
+
 
 

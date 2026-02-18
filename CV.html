@@ -18,29 +18,63 @@ body {
   line-height: 1.7;
 }
 
-/* ===== HEADER ===== */
 header {
   background-color: #0B769F;
   padding: 18px 12px;
 }
 
-nav ul { list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin:0; padding:0; }
-nav ul li { margin:0; }
+nav ul { 
+  list-style:none; 
+  display:flex; 
+  flex-wrap:wrap; 
+  justify-content:center; 
+  gap:15px; 
+  margin:0; 
+  padding:0; 
+}
+  
+nav ul li { 
+  margin:0; 
+}
 
-nav a { color:white; text-decoration:none; font-weight:bold; transition:color 0.3s; }
-nav a:hover { color:#c4d5e4; }
+nav a { 
+  color:white; 
+  text-decoration:none; 
+  font-weight:bold; 
+  transition:color 0.3s; 
+}
+  
+nav a:hover { 
+  color:#c4d5e4; 
+}
 
-.burger { display:none; font-size:1.8rem; background:none; border:none; color:white; cursor:pointer; }
+.burger { 
+  display:none; 
+  font-size:1.8rem; 
+  background:none; 
+  border:none; 
+  color:white; 
+  cursor:pointer; }
 
 @media(max-width:768px){
-  nav { display:none; }
-  nav.active { display:block; }
-  nav ul { flex-direction:column; gap:12px; text-align:center; }
-  .burger { display:block; margin:auto; }
+  nav { 
+    display:none; 
+  }
+  nav.active { 
+    display:block; 
+  }
+  nav ul { 
+    flex-direction:column; 
+    gap:12px; 
+    text-align:center; 
+  }
+  .burger { 
+    display:block; 
+    margin:auto; 
+  }
 }
 
 
-/* ===== MAIN CARD ===== */
 main {
   background: #fff;
   border-radius: 12px;
@@ -48,10 +82,10 @@ main {
   box-shadow: 0 3px 20px rgba(0,0,0,0.1);
   max-width: 1300px;
   margin: 60px auto;
-  overflow: hidden; /* verhindert Überlaufen */
+  overflow: hidden; 
 }
 
-/* ===== GRID ===== */
+
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -63,7 +97,6 @@ main {
   min-width: 300px;
 }
 
-/* ===== HEADINGS FIX ===== */
 h1 {
   color: #004aad;
   border-bottom: 2px solid #0078d7;
@@ -77,12 +110,10 @@ h1 {
   word-break: break-word;
 }
 
-/* ===== SECTIONS ===== */
 .section {
   margin-bottom: 34px;
 }
 
-/* ===== LISTS ===== */
 ul {
   list-style: circle;
   padding: 0;
@@ -100,26 +131,23 @@ ul li {
   word-break: break-word;
 }
 
-/* ===== CONTACT ===== */
 .contact strong {
   display: inline-block;
   width: 135px;
   color: #004aad;
 }
 
-/* ===== IMAGE ===== */
 .motivation-section {
   text-align: center;
 }
 
 .motivation-photo img {
-  width: 175px;
+  width: 139px;
   max-width: 100%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  margin-bottom: 16px;
+  margin-top: 50px;
 }
 
-/* ===== FOOTER ===== */
 footer {
   background: #0B769F;
   color: #fff;
@@ -138,8 +166,8 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 900px) {
+
+  @media (max-width: 900px) {
 
   main {
     padding: 28px 20px;
@@ -167,7 +195,6 @@ footer a:hover {
   }
 }
 
-/* ===== PRINT ===== */
 @media print {
   body {
     background: white;
@@ -183,7 +210,9 @@ footer a:hover {
     padding: 32px;
   }
 }
+  
 </style>
+  
 </head>
 
 <body>
@@ -210,7 +239,6 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 <main>
   <div class="flex">
 
-    <!-- ===== LINKE SPALTE ===== -->
     <div class="left">
 
       <div class="section contact">
@@ -268,7 +296,6 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 
     </div>
 
-    <!-- ===== RECHTE SPALTE ===== -->
     <div class="right">
 
       <div class="section motivation-section">
@@ -349,6 +376,7 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 
 </body>
 </html>
+
 
 
 

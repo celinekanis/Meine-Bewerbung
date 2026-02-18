@@ -178,7 +178,16 @@
 </header>
 
 <script>
-function toggleMenu(){ document.getElementById("nav").classList.toggle("active"); }
+function toggleMenu(){ 
+  document.getElementById("nav").classList.toggle("active"); 
+  
+  const btn = document.querySelector('.burger');
+  if(document.getElementById("nav").classList.contains("active")) {
+    btn.innerHTML = "✕";
+  } else {
+    btn.innerHTML = "☰";
+  }
+}
 </script>
   
   <main>
@@ -194,6 +203,7 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 </body>
 
 </html>
+
 
 
 

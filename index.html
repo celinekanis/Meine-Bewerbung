@@ -29,8 +29,6 @@ body {
 header { 
   background:#0B769F; 
   padding:20px; 
-  display: flex;
-  justify-content: flex-end; /* Schiebt den Burger nach rechts */
 }
 
 nav ul { 
@@ -43,10 +41,6 @@ nav ul {
   padding:0; 
 }
     
-nav ul li { 
-  margin:0; 
-}
-
 nav a { 
   color:white; 
   text-decoration:none; 
@@ -65,30 +59,36 @@ nav a:hover {
   border:none; 
   color:white; 
   cursor:pointer; 
-  z-index: 1001; /* Bleibt über dem Menü sichtbar */
 }
 
 @media(max-width:768px) {
+  header {
+    display: flex;
+    justify-content: flex-end; /* Schiebt NUR den Burger am Handy nach rechts */
+  }
+
   .burger { 
     display:block; 
+    position: relative;
+    z-index: 1001;
   }
 
   nav { 
     position: fixed;
     top: 0;
-    right: -100%; /* Startet außerhalb des rechten Rands */
-    width: 250px; /* Breite des Seitenmenüs */
+    right: -100%; /* Startet außerhalb rechts */
+    width: 250px;
     height: 100%;
     background: #0B769F;
-    padding-top: 80px; /* Platz für den Button oben */
-    transition: right 0.4s ease; /* Die Slide-Animation */
+    padding-top: 80px;
+    transition: right 0.4s ease;
     box-shadow: -5px 0 15px rgba(0,0,0,0.2);
     z-index: 1000;
-    display: block !important; /* Überschreibt das Standard-Hide */
+    display: block !important;
   }
 
   nav.active { 
-    right: 0; /* Slidet herein */
+    right: 0; /* Slidet rein */
   }
 
   nav ul { 
@@ -266,6 +266,7 @@ function toggleMenu(){
 
 </body>
 </html>
+
 
 
 

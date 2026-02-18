@@ -23,11 +23,14 @@ body {
   sans-serif; 
   background-color: #c4d5e4; 
   color: #222; 
+  overflow-x: hidden; /* Verhindert horizontales Scrollen beim Sliden */
 }
   
 header { 
   background:#0B769F; 
   padding:20px; 
+  display: flex;
+  justify-content: flex-end; /* Schiebt den Burger nach rechts */
 }
 
 nav ul { 
@@ -62,21 +65,37 @@ nav a:hover {
   border:none; 
   color:white; 
   cursor:pointer; 
+  z-index: 1001; /* Bleibt über dem Menü sichtbar */
 }
 
-@media(max-width:768px)
-  {
-  nav { 
-    display:none; }
-  nav.active { 
-    display:block; }
-  nav ul { 
-    flex-direction:column; 
-    gap:12px; 
-    text-align:center; }
+@media(max-width:768px) {
   .burger { 
     display:block; 
-    margin:auto; }
+  }
+
+  nav { 
+    position: fixed;
+    top: 0;
+    right: -100%; /* Startet außerhalb des rechten Rands */
+    width: 250px; /* Breite des Seitenmenüs */
+    height: 100%;
+    background: #0B769F;
+    padding-top: 80px; /* Platz für den Button oben */
+    transition: right 0.4s ease; /* Die Slide-Animation */
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: block !important; /* Überschreibt das Standard-Hide */
+  }
+
+  nav.active { 
+    right: 0; /* Slidet herein */
+  }
+
+  nav ul { 
+    flex-direction:column; 
+    gap:20px; 
+    text-align:center; 
+  }
 }
 
 main { 
@@ -181,6 +200,7 @@ footer {
   .Bewerbungsbild { 
     width: 90%; 
     margin: 0 auto; }
+  }
 
 </style>
 
@@ -190,8 +210,7 @@ footer {
 <body>
   
 <header>
-  
-  <button class="burger" onclick="toggleMenu()">☰</button>
+  <button class="burger" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
   <nav id="nav" aria-label="Hauptnavigation">
     <ul>
       <li><a href="index.html">Startseite</a></li>
@@ -203,11 +222,20 @@ footer {
       <li><a href="kontakt.html">Kontakt</a></li>
     </ul>
   </nav>
-  
 </header>
 
 <script>
-function toggleMenu(){ document.getElementById("nav").classList.toggle("active"); }
+function toggleMenu(){ 
+  document.getElementById("nav").classList.toggle("active"); 
+  
+  // Optional: Ändert das Icon von ☰ zu X
+  const btn = document.querySelector('.burger');
+  if(document.getElementById("nav").classList.contains("active")) {
+    btn.innerHTML = "✕";
+  } else {
+    btn.innerHTML = "☰";
+  }
+}
 </script>
 
 <main>
@@ -238,6 +266,7 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 
 </body>
 </html>
+
 
 
 

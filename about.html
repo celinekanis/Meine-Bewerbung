@@ -141,18 +141,33 @@ footer a:hover {
 <body>
 
 <header>
-<button class="burger" onclick="toggleMenu()">☰</button>
-<nav id="nav">
-  <a href="index.html">Startseite</a>
-  <a href="about.html">Über mich</a>
-  <a href="motivation.html">Motivation</a>
-  <a href="CV.html">Lebenslauf</a>
-  <a href="dokumente.html">Dokumente</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="kontakt.html">Kontakt</a>
-</nav>
+  <button class="burger" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
+  <nav id="nav" aria-label="Hauptnavigation">
+    <ul>
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="about.html">Über mich</a></li>
+      <li><a href="motivation.html">Motivation</a></li>
+      <li><a href="CV.html">Lebenslauf</a></li>
+      <li><a href="dokumente.html">Dokumente</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
 </header>
 
+<script>
+function toggleMenu(){ 
+  document.getElementById("nav").classList.toggle("active"); 
+  
+  const btn = document.querySelector('.burger');
+  if(document.getElementById("nav").classList.contains("active")) {
+    btn.innerHTML = "✕";
+  } else {
+    btn.innerHTML = "☰";
+  }
+}
+</script>
+  
 <main>
   
 <h1>Über mich</h1>
@@ -181,6 +196,7 @@ function toggleMenu(){ document.getElementById("nav").classList.toggle("active")
 
 </body>
 </html>
+
 
 
 

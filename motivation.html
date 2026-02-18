@@ -87,11 +87,42 @@ footer {
 
 footer a { color:#c4d5e4; }
 
-/* Mobile */
-@media(max-width:768px){
-  nav { display:none; flex-direction:column; }
-  nav.active { display:flex; }
-  .burger { display:block; margin:auto; }
+@media(max-width:768px) {
+  header {
+    display: flex;
+    justify-content: flex-end; /* Schiebt NUR den Burger am Handy nach rechts */
+  }
+
+  .burger { 
+    display:block; 
+    position: relative;
+    z-index: 1001;
+  }
+
+  nav { 
+    position: fixed;
+    top: 0;
+    right: -100%; /* Startet außerhalb rechts */
+    width: 250px;
+    height: 100%;
+    background: #0B769F;
+    padding-top: 80px;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: block !important;
+  }
+
+  nav.active { 
+    right: 0; /* Slidet rein */
+  }
+
+  nav ul { 
+    flex-direction:column; 
+    gap:20px; 
+    text-align:center; 
+  }
+
   main { padding:30px 25px; margin:40px 20px; }
 }
   
@@ -144,5 +175,6 @@ function toggleMenu() {
 
 </body>
 </html>
+
 
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Developer</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<div class="box">
+
+<h1>JavaScript Logic Room</h1>
+
+<p>Analysiere den Code und finde die Ausgabe:</p>
+
+<pre>
+
+function mystery(x) {
+  return x * 2 + 3;
+}
+
+console.log(mystery(4));
+
+</pre>
+
+<p>Was wird in der Konsole angezeigt?</p>
+
+<input id="input" placeholder="Antwort eingeben">
+
+<br>
+
+<button onclick="check(
+document.getElementById('input').value,
+'11',
+'win.html'
+)">
+
+Bestätigen
+
+</button>
+
+<p id="msg"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>

@@ -116,7 +116,7 @@
 @media(max-width:768px) {
   header {
     display: flex;
-    justify-content: flex-end; /* Schiebt NUR den Burger am Handy nach rechts */
+    justify-content: flex-end; 
   }
 
   .burger { 
@@ -128,7 +128,7 @@
   nav { 
     position: fixed;
     top: 0;
-    right: -100%; /* Startet außerhalb rechts */
+    right: -100%;
     width: 250px;
     height: 100%;
     background: #0B769F;
@@ -140,7 +140,7 @@
   }
 
   nav.active { 
-    right: 0; /* Slidet rein */
+    right: 0; 
   }
 
   nav ul { 
@@ -208,10 +208,10 @@ function toggleMenu(){
       <h1>Dokumente</h1>
       <p>Hier finden Sie Dokumente wie Lebenslauf und Zeugnisse, bereitgestellt als PDF-Datei zum ansehen und herunterladen</p>
         <div class="Dokumente">  
-        <a href="CV_KanisC.pdf" target="_blank">Lebenslauf ansehen</a>
-        <a href="CV_KanisC.pdf" download >Lebenslauf herunterladen</a>
-        <a href="Arbeitszeugnisse_KanisC.pdf" target="_blank">Zeugnisse ansehen</a>
-        <a href="Arbeitszeugnisse_KanisC.pdf" download >Zeugnisse herunterladen</a>
+        <a href="/PDF/CV_KanisC.pdf" target="_blank">Lebenslauf ansehen</a>
+        <a href="/PDF/CV_KanisC.pdf" download >Lebenslauf herunterladen</a>
+        <a href="/PDF/Arbeitszeugnisse_KanisC.pdf" target="_blank">Zeugnisse ansehen</a>
+        <a href="PDF/Arbeitszeugnisse_KanisC.pdf" download >Zeugnisse herunterladen</a>
       </div>
     </div>
     
@@ -224,3 +224,4 @@ function toggleMenu(){
 </body>
 
 </html>
+

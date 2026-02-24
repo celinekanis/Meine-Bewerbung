@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Rechnungsverwaltung – Portfolio Projekt</title>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Rechnungsverwaltung</h1>
+
+<input id="customer" placeholder="Kunde">
+
+<input id="net" placeholder="Netto €" type="number">
+
+<button onclick="addInvoice()">
+
+Rechnung hinzufügen
+
+</button>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Kunde</th>
+<th>Netto</th>
+<th>MwSt (19%)</th>
+<th>Brutto</th>
+<th>Löschen</th>
+
+</tr>
+
+</thead>
+
+<tbody id="list">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

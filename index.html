@@ -23,7 +23,7 @@ body {
   sans-serif; 
   background-color: linear-gradient(135deg,#c4d5e4,#0B769F; 
   color: #222; 
-  overflow-x: hidden; /* Verhindert horizontales Scrollen beim Sliden */
+  overflow-x: hidden; 
 }
   
 header { 
@@ -64,7 +64,7 @@ nav a:hover {
 @media(max-width:768px) {
   header {
     display: flex;
-    justify-content: flex-end; /* Schiebt NUR den Burger am Handy nach rechts */
+    justify-content: flex-end;
   }
 
   .burger { 
@@ -76,7 +76,7 @@ nav a:hover {
   nav { 
     position: fixed;
     top: 0;
-    right: -100%; /* Startet außerhalb rechts */
+    right: -100%; 
     width: 250px;
     height: 100%;
     background: #0B769F;
@@ -88,7 +88,7 @@ nav a:hover {
   }
 
   nav.active { 
-    right: 0; /* Slidet rein */
+    right: 0; 
   }
 
   nav ul { 
@@ -228,7 +228,6 @@ footer {
 function toggleMenu(){ 
   document.getElementById("nav").classList.toggle("active"); 
   
-  // Optional: Ändert das Icon von ☰ zu X
   const btn = document.querySelector('.burger');
   if(document.getElementById("nav").classList.contains("active")) {
     btn.innerHTML = "✕";
@@ -273,6 +272,7 @@ function toggleMenu(){
 
 </body>
 </html>
+
 
 
 

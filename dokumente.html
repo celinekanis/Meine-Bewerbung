@@ -170,7 +170,9 @@
   </style>
   
 </head>
+  
 <body>
+  
 <header>
   <button class="burger" onclick="toggleMenu()">☰</button>
   <nav id="nav" aria-label="Hauptnavigation">
@@ -190,17 +192,17 @@
 function toggleMenu(){ 
   document.getElementById("nav").classList.toggle("active"); 
   
-  // Optional: Ändert das Icon von ☰ zu X
   const btn = document.querySelector('.burger');
   if(document.getElementById("nav").classList.contains("active")) {
     btn.innerHTML = "✕";
   } else {
     btn.innerHTML = "☰";
   }
-}
+  }
 </script>
   
   <main>
+    
     <div class="contact-box">
       <h1>Dokumente</h1>
       <p>Hier finden Sie Dokumente wie Lebenslauf und Zeugnisse, bereitgestellt als PDF-Datei zum ansehen und herunterladen</p>
@@ -211,13 +213,17 @@ function toggleMenu(){
         <a href="Arbeitszeugnisse_KanisC.pdf" download >Zeugnisse herunterladen</a>
       </div>
     </div>
+    
   </main>
+  
   <footer>
     <p>© 2026 Celine Kanis | <a href="mailto:celine.kanis@gmail.com">Kontakt aufnehmen</a></p>
   </footer>
+  
 </body>
 
 </html>
+
 
 
 

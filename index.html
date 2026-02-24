@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Celine Kanis – Bewerbung als Fachinformatikerin für Anwendungsentwicklung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    
+  :root {
+  --primary:#0B769F;
+  --background:#c4d5e4;
+  --text:#222;
+  --white:#fff;
+}
+    
+body { 
+  margin: 0; 
+  font-family: "Montserrat", 
+  sans-serif; 
+  background: linear-gradient(135deg, #c4d5e4, #0B769F);
+  color: #222; 
+  overflow-x: hidden; 
+}
+  
+header { 
+  background:#0B769F; 
+  padding:20px; 
+}
+
+nav ul { 
+  list-style:none; 
+  display:flex; 
+  flex-wrap:wrap; 
+  justify-content:center; 
+  gap:15px; 
+  margin:0; 
+  padding:0; 
+}
+    
+nav a { 
+  color:white; 
+  text-decoration:none; 
+  font-weight:bold; 
+  transition:color 0.3s; 
+}
+    
+nav a:hover { 
+  color:#c4d5e4; 
+}
+
+.burger { 
+  display:none; 
+  font-size:1.8rem; 
+  background:none; 
+  border:none; 
+  color:white; 
+  cursor:pointer; 
+}
+
+@media(max-width:768px) {
+  header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .burger { 
+    display:block; 
+    position: relative;
+    z-index: 1001;
+  }
+
+  nav { 
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 250px;
+    height: 100%;
+    background: #0B769F;
+    padding-top: 80px;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: block !important;
+  }
+
+  nav.active { 
+    right: 0; 
+  }
+
+  nav ul { 
+    flex-direction:column; 
+    gap:20px; 
+    text-align:center; 
+  }
+}
+
+main { 
+  padding: 60px; 
+}
+    
+.headline { 
+  color: #0B769F; 
+  font-variant: small-caps; 
+  font-weight: bolder; 
+  text-align: left; 
+  margin-bottom: 40px; 
+  max-width: 1000px; 
+  font-size: 2.2rem; 
+  white-space: nowrap; 
+  overflow: visible; 
+  text-overflow: unset; }
+    
+@media (max-width: 768px) 
+  { .headline { 
+    font-size: 1.4rem; 
+    white-space: normal; 
+    text-align: center; } 
+  }
+    
+.intro { 
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: center; 
+  gap: 40px; 
+  background: #c4d5e4;
+  color: black; 
+  border-radius: 8px; 
+  padding: 40px 60px; 
+  box-shadow: 0 3px 20px rgba(0,0,0,0.1); 
+  border-top: 6px solid #0B769F;
+  border-bottom: 6px solid #0B769F;
+}
+    
+.intro-text { 
+  flex: 1 1 400px; 
+}
+    
+.intro-text h2 { 
+  font-size: x-large; 
+  margin-top: 0; 
+}
+    
+.intro-text p { 
+  line-height: 1.7; 
+  margin-bottom: 20px; 
+}
+    
+.Bewerbungsbild { 
+  max-width: 380px; 
+  height: auto; 
+  border-radius: 6px; 
+  object-fit: cover; 
+  flex-shrink: 0; 
+}
+    
+.more { 
+  display: inline-block; 
+  background: #fff; 
+  color: #0B769F; 
+  padding: 10px 20px; 
+  border-radius: 25px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: all 0.3s; 
+  margin-right: 10px; 
+  margin-bottom: 10px; 
+}
+    
+.more:hover { 
+  background-color: #004aad; 
+  color: #fff; 
+}
+
+footer {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 60px;
+}
+
+    footer a {
+      color: var(--background);
+      text-decoration: none;
+}
+
+    footer a:hover {
+      text-decoration: underline;
+}
+  
+@media (max-width: 768px) 
+  { main { 
+    padding: 30px 20px; }
+  .intro { 
+    flex-direction: column; 
+    padding: 30px; }
+  .Bewerbungsbild { 
+    width: 90%; 
+    margin: 0 auto; }
+  }
+
+</style>
+
+</head>
+
+  
+<body>
+  
+<header>
+  <button class="burger" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
+  <nav id="nav" aria-label="Hauptnavigation">
+    <ul>
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="about.html">Über mich</a></li>
+      <li><a href="motivation.html">Motivation</a></li>
+      <li><a href="CV.html">Lebenslauf</a></li>
+      <li><a href="dokumente.html">Dokumente</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+function toggleMenu(){ 
+  document.getElementById("nav").classList.toggle("active"); 
+  
+  const btn = document.querySelector('.burger');
+  if(document.getElementById("nav").classList.contains("active")) {
+    btn.innerHTML = "✕";
+  } else {
+    btn.innerHTML = "☰";
+  }
+}
+</script>
+
+<main>
+  
+  <h1 class="headline">Bewerbung für ein Praktikum als Fachinformatikerin für Anwendungsentwicklung</h1>
+  
+  <section class="intro">
+    <div class="intro-text">
+      
+      <h2>Hallo!</h2>
+      <p>Ich bin Celine – wissbegierige Quereinsteigerin mit Leidenschaft für Programmierung und digitale Lösungen. Ich lerne derzeit die Grundlagen des Programmierens und der Webentwicklung und möchte in einem IT‑Praktikum meine Liebe zum logischen Denken und Problemlösen mit echter Praxiserfahrung verbinden.</p>
+      <p>Mein Ziel ist es, Fachinformatikerin für Anwendungsentwicklung zu werden. <br> Ich möchte meine Fähigkeiten zunächste im Rahmen eines Praktikums weiterentwickeln und anschließend eine Umschulung beginnen, um langfristig als Softwareentwicklerin tätig zu sein.</p>
+      <p> Ich arbeite mich eigenständig und mit großer Begeisterung in neue Technologien ein und freue mich darauf, meine berufliche Zukunft in der Anwendungsentwicklung aufzubauen. </p>
+      <p>Auf dieser Website können Sie mehr über Mich, meine bisherige Laufbahn, meine Motivation und meine Ziele für die Zukunft erfahren. Sie dient als Vorstellung meiner Person für Bewerbungen, aber auch zu Übungszwecken und Vertiefung von neu Erlerntem.</p>
+      
+      <div class="button-group">
+        <a href="about.html" class="more">Mehr über mich</a>
+        <a href="motivation.html" class="more">Motivation</a>
+        <a href="CV.html" target="_blank" rel="noopener noreferrer" class="more">Lebenslauf ansehen</a>
+        <a href="dokumente.html" class="more">Dokumente</a>
+        <a href="kontakt.html" class="more">Kontakt</a>
+      </div>
+   
+    </div>
+    
+    <img class="Bewerbungsbild" src="Bewerbungsbild.png" alt="Bewerbungsfoto von Celine Kanis">
+ 
+  </section>
+
+</main>
+
+<footer>
+<p>© 2026 Celine Kanis | <a href="mailto:celine.kanis@gmail.com">Kontakt aufnehmen</a></p>
+</footer>
+
+</body>
+</html>

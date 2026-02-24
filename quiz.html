@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Arbeitgeber Match Quiz – Celine Kanis</title>
+
+<style>
+
+body {
+
+font-family: Arial, sans-serif;
+
+background: linear-gradient(135deg, #c4d5e4 , #0B769F);
+
+color: white;
+
+text-align: center;
+
+padding: 50px;
+
+}
+
+.container {
+
+background: rgba(22, 97, 151, 0.3);
+
+padding: 30px;
+
+border-radius: 15px;
+
+max-width: 600px;
+
+margin: auto;
+
+}
+
+button {
+
+background: white;
+
+color: black;
+
+border: none;
+
+padding: 15px 25px;
+
+margin: 10px;
+
+font-size: 16px;
+
+border-radius: 8px;
+
+cursor: pointer;
+
+transition: 0.3s;
+
+}
+
+button:hover {
+
+background: #72baca;
+
+}
+
+#result {
+
+font-size: 22px;
+
+margin-top: 20px;
+
+font-weight: bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Passt Ihr Unternehmen zu mir?</h1>
+
+<p>Beantworten Sie 5 kurze Fragen:</p>
+
+<div id="quiz">
+
+<p>Entwickeln Sie moderne Webanwendungen?</p>
+
+<button onclick="answer(1)">Ja</button>
+
+<button onclick="answer(0)">Nein</button>
+
+</div>
+
+<p id="result"></p>
+
+</div>
+
+
+<script>
+
+let score = 0;
+
+let question = 0;
+
+function answer(points){
+
+score += points;
+
+question++;
+
+nextQuestion();
+
+}
+
+function nextQuestion(){
+
+let quiz = document.getElementById("quiz");
+
+if(question == 1){
+
+quiz.innerHTML = `
+
+<p>Arbeiten Sie gerne mit motivierten Lernenden?</p>
+
+<button onclick="answer(1)">Ja</button>
+
+<button onclick="answer(0)">Nein</button>
+
+`;
+
+}
+
+else if(question == 2){
+
+quiz.innerHTML = `
+
+<p>Fördern Sie zukünftige Entwickler?</p>
+
+<button onclick="answer(1)">Ja</button>
+
+<button onclick="answer(0)">Nein</button>
+
+`;
+
+}
+
+else if(question == 3){
+quiz.innerHTML = `
+
+<p>  Streben Sie nach Innovation und Wachstum?</p>
+
+<button onclick="answer(1)">Ja</button>
+
+<button onclick="answer(0)">Nein</button>
+
+`
+}
+
+else if(question==4){
+
+    quiz.innerHTML = `
+
+    <p> Ziehen Sie es vor, in einem dynamischen Umfeld zu arbeiten?</p>
+
+    <button onclick="answer(1)">Ja</button>
+
+    <button onclick="answer(0)">Nein</button<
+
+    `
+}
+
+else{
+
+showResult();
+
+}
+
+}
+
+function showResult(){
+
+let result = document.getElementById("result");
+
+let quiz = document.getElementById("quiz");
+
+quiz.innerHTML = "";
+
+if(score >= 3){
+
+result.innerHTML =
+
+"🎉 Perfekt! Ihr Unternehmen passt hervorragend zu mir. Ich freue mich darauf, Sie kennenzulernen!";
+
+}
+
+else{
+
+result.innerHTML =
+
+"Interessant! Vielleicht können wir uns trotzdem gegenseitig überzeugen.";
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
